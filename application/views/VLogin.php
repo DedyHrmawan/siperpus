@@ -48,7 +48,7 @@
                                     <input class="form-control py-4" id="inputPassword" type="password" placeholder="Masukan Password" />
                                 </div>
                                 <div class="form-group d-flex align-items-center justify-content-center mt-4 mb-0">
-                                    <a class="btn btn-primary" href="<?php echo site_url(''); ?>">Masuk</a>
+                                    <a class="btn btn-primary" href="<?php echo site_url('admin/OverviewController/vOverview'); ?>">Masuk</a>
                                 </div>
                                 <div class="form-group d-flex align-items-center justify-content-center mt-3 mb-0">
                                     <p class="small text-black text-center">Belum punya akun ?</p>

@@ -32,7 +32,6 @@
     <br>
     <br>
     <br>
-    <br>
     <section class="page-section ">
         <div class="container bg-content">
             <div class="row ml-3">
@@ -44,7 +43,7 @@
                     </div>
                 </div>
                 <div class="col ml-5">
-                    <img class="img-fluid float-right" style="width: 60%;" src="<?= base_url(); ?>assets/img/home/circlep.png" alt="Responsive image" />
+                    <img class="img-fluid float-right" style="width: 50%;" src="<?= base_url(); ?>assets/img/home/circlep.png" alt="Responsive image" />
                 </div>
             </div>
         </div>

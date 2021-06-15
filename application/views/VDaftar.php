@@ -78,7 +78,7 @@
                                     <input type="number" name="" class="form-control" placeholder="Masukkan No Telepon" required>
                                 </div>
                                 <div class="form-group d-flex align-items-center justify-content-center">
-                                    <a class="btn btn-primary" href="<?php echo site_url(''); ?>">Daftar</a>
+                                    <a class="btn btn-primary" href="<?php echo site_url('LoginController'); ?>">Daftar</a>
                                 </div>
                             </form>
                         </div>
