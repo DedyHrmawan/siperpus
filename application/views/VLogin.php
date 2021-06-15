@@ -32,7 +32,7 @@
     <main>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-6">
+                <div class="col-lg-5">
                     <!-- Basic login form-->
                     <div class="card shadow-lg border-0 rounded-lg mt-10">
                         <div class="card-body">

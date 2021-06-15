@@ -28,10 +28,10 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2 ml-3 ml-4 mt-3">
-                        <button type="submit" class="btn btn-primary btn-block">Tampilkan</button>
+                        <button type="submit" class="btn btn-primary btn-block text-sm">Tampilkan</button>
                     </div>
                     <div class="col-md-2 ml-3 ml-4 mt-3">
-                        <button type="submit" class="btn btn-dark btn-block" data-toggle="modal" data-target="#pdfModal"><i class="fa fa-print fa-fw mr-1"></i>Cetak Laporan</button>
+                        <button type="submit" class="btn btn-dark btn-block text-sm" data-toggle="modal" data-target="#pdfModal"><i class="fa fa-print fa-fw mr-1"></i>Cetak Laporan</button>
                     </div>
                 </div>
             </div>

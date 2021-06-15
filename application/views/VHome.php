@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="col ml-5">
-                    <img class="img-fluid float-right" style="width: 50%;" src="<?= base_url(); ?>assets/img/home/circlep.png" alt="Responsive image" />
+                    <img class="img-fluid float-right" style="width: 60%;" src="<?= base_url(); ?>assets/img/home/circlep.png" alt="Responsive image" />
                 </div>
             </div>
         </div>
