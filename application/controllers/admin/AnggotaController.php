@@ -9,6 +9,6 @@ class AnggotaController extends CI_Controller
     {
         $data['title']          = 'Anggota | e-Libs';
 
-        $this->template->view('admin/VAnggota', $data);
+        $this->admin->view('admin/VAnggota', $data);
     }
 }

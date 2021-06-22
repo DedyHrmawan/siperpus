@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('Template','TemplateKepala');
+$autoload['libraries'] = array('Admin','Kepala', 'Petugas','Anggota');
 
 /*
 | -------------------------------------------------------------------

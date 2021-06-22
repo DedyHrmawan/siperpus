@@ -9,6 +9,6 @@ class KategoriController extends CI_Controller
     {
         $data['title']          = 'Kategori | e-Libs';
 
-        $this->template->view('admin/VKategori', $data);
+        $this->admin->view('admin/VKategori', $data);
     }
 }

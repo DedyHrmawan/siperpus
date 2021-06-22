@@ -1,5 +1,5 @@
 <?php
-class Template
+class Admin
 {
     protected $_ci;
 

@@ -1,5 +1,5 @@
 <?php
-class TemplateKepala
+class Kepala
 {
     protected $_ci;
 

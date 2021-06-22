@@ -9,6 +9,6 @@ class BukuController extends CI_Controller
     {
         $data['title']          = 'Buku | e-Libs';
 
-        $this->template->view('admin/VBuku', $data);
+        $this->admin->view('admin/VBuku', $data);
     }
 }

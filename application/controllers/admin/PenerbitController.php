@@ -9,6 +9,6 @@ class PenerbitController extends CI_Controller
     {
         $data['title']          = 'Penerbit | e-Libs';
 
-        $this->template->view('admin/VPenerbit', $data);
+        $this->admin->view('admin/VPenerbit', $data);
     }
 }

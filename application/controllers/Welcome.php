@@ -23,67 +23,112 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 
-	//kepalaperpus
+	//Controller Kepalaperpus
 	public function vOverviewKepala()
     {
-        $data['title']          = 'Overview | e-Libs';
+        $data['title']          = 'Overview Kepala | e-Libs';
 
-        $this->templatekepala->view('kepalaperpus/VOverviewKepala', $data);
+        $this->kepala->view('kepalaperpus/VOverviewKepala', $data);
     }
 
 	public function vTransaksi()
     {
         $data['title']          = 'Overview | e-Libs';
 
-        $this->templatekepala->view('kepalaperpus/VTransaksi', $data);
+        $this->kepala->view('kepalaperpus/VTransaksiKepala', $data);
     }
 
 	public function vLaporanBuku()
     {
         $data['title']          = 'Laporan Buku | e-Libs';
 
-        $this->templatekepala->view('kepalaperpus/VLaporanBuku', $data);
+        $this->kepala->view('kepalaperpus/VLaporanBuku', $data);
     }
 
 	public function vLaporanPeminjaman()
     {
         $data['title']          = 'Laporan Peminjaman | e-Libs';
 
-        $this->templatekepala->view('kepalaperpus/VLaporanPeminjaman', $data);
+        $this->kepala->view('kepalaperpus/VLaporanPeminjaman', $data);
     }
 
 	public function vLaporanPengembalian()
     {
         $data['title']          = 'Laporan Pengembalian | e-Libs';
 
-        $this->templatekepala->view('kepalaperpus/VLaporanPengembalian', $data);
+        $this->kepala->view('kepalaperpus/VLaporanPengembalian', $data);
     }
 
 	public function vLaporanDenda()
     {
         $data['title']          = 'Laporan Denda | e-Libs';
 
-        $this->templatekepala->view('kepalaperpus/VLaporanDenda', $data);
+        $this->kepala->view('kepalaperpus/VLaporanDenda', $data);
     }
 
 	public function vLaporanPetugas()
     {
         $data['title']          = 'Laporan Petugas | e-Libs';
 
-        $this->templatekepala->view('kepalaperpus/VLaporanPetugas', $data);
+        $this->kepala->view('kepalaperpus/VLaporanPetugas', $data);
     }
 
 	public function vadmin()
     {
         $data['title']          = 'Admin | e-Libs';
 
-        $this->templatekepala->view('kepalaperpus/VAdmin', $data);
+        $this->kepala->view('kepalaperpus/VAdmin', $data);
     }
 
 	public function vPetugas()
     {
         $data['title']          = 'Petugas | e-Libs';
 
-        $this->templatekepala->view('kepalaperpus/VPetugas', $data);
+        $this->kepala->view('kepalaperpus/VPetugas', $data);
     }
+
+    //Controller Petugas
+    public function vOverviewPetugas()
+    {
+        $data['title']          = 'Overview Petugas | e-Libs';
+
+        $this->petugas->view('petugas/VOverviewPetugas', $data);
+    }
+
+    public function vTransaksiPetugas()
+    {
+        $data['title']          = 'Transaksi | e-Libs';
+
+        $this->petugas->view('petugas/VTransaksiPetugas', $data);
+    }
+
+    public function vPembayaran()
+    {
+        $data['title']          = 'Pembayaran | e-Libs';
+
+        $this->petugas->view('petugas/VPembayaran', $data);
+    }
+
+    // Controller Anggota
+
+    public function vOverviewAnggota()
+    {
+        $data['title']          = 'Overview | e-Libs';
+
+        $this->anggota->view('anggota/VOverviewAnggota', $data);
+    }
+
+    public function vBuku()
+    {
+        $data['title']          = 'Daftar Buku | e-Libs';
+
+        $this->anggota->view('anggota/VBuku', $data);
+    }   
+
+    public function vPeminjaman()
+    {
+        $data['title']          = 'Peminjaman | e-Libs';
+
+        $this->anggota->view('anggota/VPeminjaman', $data);
+    }   
 }

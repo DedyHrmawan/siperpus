@@ -9,6 +9,6 @@ class PengarangController extends CI_Controller
     {
         $data['title']          = 'Pengarang | e-Libs';
 
-        $this->template->view('admin/VPengarang', $data);
+        $this->admin->view('admin/VPengarang', $data);
     }
 }

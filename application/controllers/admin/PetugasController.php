@@ -9,6 +9,6 @@ class PetugasController extends CI_Controller
     {
         $data['title']          = 'Petugas | e-Libs';
 
-        $this->template->view('admin/VPetugas', $data);
+        $this->admin->view('admin/VPetugas', $data);
     }
 }
