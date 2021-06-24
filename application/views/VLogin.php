@@ -30,37 +30,46 @@
         </div>
     </nav>
     <main>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-5">
-                    <!-- Basic login form-->
-                    <div class="card shadow-lg border-0 rounded-lg mt-10">
-                        <div class="card-body">
-                            <!-- Login form-->
-                            <form>
-                            <p class="small text-black text-center mb-5" for="inputEmailAddress">Silahkan masukkan Email dan Password untuk melanjutkan !</p>
-                                <div class="form-group">
-                                    <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                    <input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Masukan Email" />
+
+        <div class="content">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="assets/img/undraw_remotely_2j6y.svg" alt="Image" class="img-fluid">
+                </div>
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <!-- Basic login form-->
+                            <div class="card shadow-lg border-0 rounded-lg mt-10">
+                                <div class="card-body">
+                                    <!-- Login form-->
+                                    <form>
+                                        <p class="small text-black text-center mb-5" for="inputEmailAddress">Silahkan masukkan Email dan Password untuk melanjutkan !</p>
+                                        <div class="form-group">
+                                            <label class="small mb-1" for="inputEmailAddress">Email</label>
+                                            <input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Masukan Email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="small mb-1" for="inputPassword">Password</label>
+                                            <input class="form-control py-4" id="inputPassword" type="password" placeholder="Masukan Password" />
+                                        </div>
+                                        <div class="form-group d-flex align-items-center justify-content-center mt-4 mb-0">
+                                            <a class="btn btn-primary" href="<?php echo site_url('admin/OverviewController/vOverview'); ?>">Masuk</a>
+                                        </div>
+                                        <div class="form-group d-flex align-items-center justify-content-center mt-3 mb-0">
+                                            <p class="small text-black text-center">Belum punya akun ?</p>
+                                        </div>
+                                        <div class="form-group d-flex align-items-center justify-content-center">
+                                            <a class="btn btn-primary-soft" href="<?php echo site_url('DaftarController'); ?>">Daftar</a>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="form-group">
-                                    <label class="small mb-1" for="inputPassword">Password</label>
-                                    <input class="form-control py-4" id="inputPassword" type="password" placeholder="Masukan Password" />
-                                </div>
-                                <div class="form-group d-flex align-items-center justify-content-center mt-4 mb-0">
-                                    <a class="btn btn-primary" href="<?php echo site_url('admin/OverviewController/vOverview'); ?>">Masuk</a>
-                                </div>
-                                <div class="form-group d-flex align-items-center justify-content-center mt-3 mb-0">
-                                    <p class="small text-black text-center">Belum punya akun ?</p>
-                                </div>
-                                <div class="form-group d-flex align-items-center justify-content-center">
-                                    <a class="btn btn-primary-soft" href="<?php echo site_url('DaftarController'); ?>">Daftar</a>
-                                </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </main>
 </body>
