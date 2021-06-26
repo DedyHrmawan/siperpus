@@ -32,43 +32,80 @@
 </head>
 
 <body class="nav-fixed">
-    <nav class="topnav navbar navbar-expand shadow navbar-light bg-content" id="sidenavAccordion">
-        <!-- <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2 ml-3" id="sidebarToggle" href="assets/#"><i data-feather="menu"></i></button> -->
-        <img style="width:3%" class="navbar-brand-img ml-3" src="<?= base_url(); ?>assets/img/ic_logoelibs.svg"></img>
-        <a class="navbar-brand ml-3" href="<?php echo site_url('admin/AdminOverview/vOverview'); ?>">Perpustakaan Online</a>
-        <ul class="navbar-nav align-items-center ml-auto">
-            <li class="nav-item dropdown no-caret mr-2 dropdown-user">
-                <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="assets/javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-fluid" /> <i data-feather="user"></i></a>
-                <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownUserImage">
-                    <h6 class="dropdown-header d-flex align-items-center">
-                        <i data-feather="user"></i>
-                        <div class="dropdown-user-details">
-                            <div class="dropdown-user-details-name">Admin</div>
+<nav class="topnav navbar navbar-expand shadow navbar-light bg-content" id="sidenavAccordion">
+    <img style="width:3%" class="navbar-brand-img ml-3" src="<?= base_url(); ?>assets/img/ic_logoelibs.svg"></img>
+    <a class="navbar-brand ml-3" href="<?php echo site_url('Welcome/vBuku'); ?>">Perpustakaan Online</a>
+
+    <div class="d-flex flex-column">
+        <div class="input-group input-group-joined input-group-solid ">
+            <input class="form-control mr-sm-10 " type="search" placeholder="Cari Buku" aria-label="Search" />
+            <div class="input-group-append">
+                <div class="input-group-text"><i data-feather="search"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown no-caret mr-5">
+            <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownMessages" href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-shopping-cart"></i>&nbsp;
+                <span class="badge badge-primary bg-primary">1</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownAlerts">
+                <h6 class="dropdown-header dropdown-notifications-header">
+                    <i class="mr-2" data-feather="shopping-cart"></i>
+                    Keranjang
+                    <a class="text-primary ml-10" href="<?php echo site_url('Welcome/vKeranjang'); ?>">Lihat Sekarang!</a>
+                </h6>
+                <a class="dropdown-item ">
+                    <div class="row">
+                        <div class="col">
+                            <img class="ic-img" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" alt="Image">
                         </div>
-                    </h6>
-                    <a type="button" class="dropdown-item" data-toggle="modal" data-target="#KonfirmasiModal">
-                        <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
-                        Logout
-                    </a>
-                </div>
-            </li>
-            <li class="nav-item dropdown no-caret mr-5 dropdown-notifications list-pemberitahuan">
-                <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownMessages" href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-bell"></i>&nbsp;
-                    <span class="badge badge-danger bg-danger"></span>
+                        <div class="col-mx-0">
+                            <h6 class="card-title text-left ml-1">Kambing Jantan</h6>
+                            <div class="w-100"></div>
+                            <div class="col-mx-0">
+                                <h6 class="text-left ml-1 badge-2 badge-pill">1 Buku</h6>
+                            </div>
+                        </div>
+                    </div>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownAlerts">
-                    <h6 class="dropdown-header dropdown-notifications-header">
-                        <i class="mr-2" data-feather="bell"></i>
-                        Pemberitahuan
-                    </h6>
-                    <a class="dropdown-item dropdown-notifications-item notifikasi">
-                        Tidak Ada Pemberitahuan
-                    </a>
-                </div>
-            </li>
-        </ul>
-    </nav>
+                <a class="dropdown-item ">
+                    <div class="row">
+                        <div class="col">
+                            <img class="ic-img" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" alt="Image">
+                        </div>
+                        <div class="col-mx-0">
+                            <h6 class="card-title text-left ml-1">Kambing Jantan</h6>
+                            <div class="w-100"></div>
+                            <div class="col-mx-0">
+                                <h6 class="text-left ml-1 badge-2 badge-pill">1 Buku</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown no-caret mr-5 dropdown-notifications">
+            <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownMessages" href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell"></i>&nbsp;
+                <span class="badge badge-danger bg-danger"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownAlerts">
+                <h6 class="dropdown-header dropdown-notifications-header">
+                    <i class="mr-2" data-feather="bell"></i>
+                    Pemberitahuan
+                </h6>
+                <a class="dropdown-item dropdown-notifications-item notifikasi">
+                    Tidak Ada Pemberitahuan
+                </a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
     <!--Modal Konfirmasi-->
     <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="KonfirmasiModal">
         <div class="modal-dialog" role="document">

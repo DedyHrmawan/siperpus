@@ -110,14 +110,6 @@ class Welcome extends CI_Controller {
     }
 
     // Controller Anggota
-
-    public function vOverviewAnggota()
-    {
-        $data['title']          = 'Overview | e-Libs';
-
-        $this->anggota->view('anggota/VOverviewAnggota', $data);
-    }
-
     public function vBuku()
     {
         $data['title']          = 'Daftar Buku | e-Libs';
@@ -125,10 +117,16 @@ class Welcome extends CI_Controller {
         $this->anggota->view('anggota/VBuku', $data);
     }   
 
-    public function vPeminjaman()
+    public function vTransaksiAnggota()
     {
-        $data['title']          = 'Peminjaman | e-Libs';
+        $data['title']          = 'Transaksi | e-Libs';
 
-        $this->anggota->view('anggota/VPeminjaman', $data);
+        $this->anggota->view('anggota/VTransaksi', $data);
     }   
+
+    public function vKeranjang(){
+        $data['title']          = 'Keranjang | e-Libs';
+
+        $this->anggota->view('anggota/VKeranjang', $data);   
+    }
 }
