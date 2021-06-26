@@ -431,7 +431,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="card-group mx-auto col-11 pl-0 ">
+                        <div class="card-group mx-auto col-12 p-0 ">
                             <div class="card">
                                 <img class="card-img-top" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" alt="Image">
                             </div>
@@ -446,7 +446,7 @@
                                                 </td>
                                                 <td class="p-0">:</td>
                                                 <td>
-                                                    <h6 class="badge-2 badge-pill">00000000000</h6>
+                                                    <h6 class="badge-2 badge-pill">000000000</h6>
                                                 </td>
                                             </tr>
                                             <tr>
