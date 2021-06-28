@@ -31,6 +31,6 @@
 <div class="sidenav-footer">
     <div class="sidenav-footer-content">
         <div class="sidenav-footer-subtitle">Login Sebagai:</div>
-        <div class="sidenav-footer-title">Admin</div>
+        <div class="sidenav-footer-title text-left">Admin</div>
     </div>
 </div>

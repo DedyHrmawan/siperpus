@@ -57,7 +57,7 @@
                     Keranjang
                     <a class="text-primary ml-10" href="<?php echo site_url('Welcome/vKeranjang'); ?>">Lihat Sekarang!</a>
                 </h6>
-                <a class="dropdown-item ">
+                <a class="dropdown-item" href="<?php echo site_url('Welcome/vKeranjang'); ?>">
                     <div class="row">
                         <div class="col">
                             <img class="ic-img" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" alt="Image">
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="dropdown-item ">
+                <a class="dropdown-item " href="<?php echo site_url('Welcome/vKeranjang'); ?>">
                     <div class="row">
                         <div class="col">
                             <img class="ic-img" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" alt="Image">

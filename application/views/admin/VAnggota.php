@@ -1,5 +1,4 @@
 <div class="container-fluid mt-5">
-    <!-- Custom page header alternative example-->
     <div class="d-flex justify-content-between align-items-sm-center flex-column flex-sm-row mb-4">
         <div class="mr-4 mb-3 mb-sm-0">
             <h6 class="mb-0">Admin Management Anggota</h6>

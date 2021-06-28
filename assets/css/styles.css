@@ -20578,7 +20578,7 @@ pre[class*=language-] {
 }
 
 .card-1{
-  box-shadow: rgba(49, 53, 59, 0.12) 0px 1px 6px 0px;
+  box-shadow: rgba(255, 255, 255, 0.12) 0px 1px 6px 0px;
   border-radius:12px;
 }
 
@@ -20646,9 +20646,7 @@ pre[class*=language-] {
     border-radius: 50%;
     background-clip: padding-box;
 }
-div {
-    text-align: center;
-}
+
 .minus:hover{
     background-color: #717fe0 !important;
 }

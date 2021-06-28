@@ -6,9 +6,7 @@
         </div>
     </div>
     <div class="mb-5 font-weight-bold">
-        <h2>Peminjaman
-            <button class="btn btn-primary btn-sm float-right font-weight-bold" type="button" data-id="" type="button" data-toggle="modal" data-target="#tambahPeminjaman"><i class="fa fa-plus fa-fw mr-2"></i>Tambah Peminjaman</button>
-        </h2>
+        <h2>Transaksi</h2>
     </div>
     <div class="row mt-4">
         <!-- Daftar Peminjaman -->
@@ -20,18 +18,24 @@
                             <thead>
                                 <tr>
                                     <th>Judul Buku</th>
-                                    <th>Jumlah Buku</th>
-                                    <th>Stok Buku</th>
-                                    <th>Aksi</th>
+                                    <th>Pengarang</th>
+                                    <th>Jumlah</th>
+                                    <th>Tanggal Peminjaman</th>
+                                    <th>Tanggal Pengembalian</th>
+                                    <th>Denda</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Kambing Jantan</td>
+                                    <td>Raditya Dika</td>
                                     <td>2</td>
-                                    <td>100</td>
+                                    <td>14/01/2021</td>
+                                    <td>14/01/2022</td>
+                                    <td>Rp. 0</td>
                                     <td>
-                                        <button class="btn btn-sm btn-danger ml-1" data-id="" type="button" data-toggle="modal" data-target="#hapusPeminjaman"><i class="fa fa-trash fa-fw"></i></button>
+                                        <div class="badge badge-success badge-pill">Selesai</div>
                                     </td>
                                 </tr>
                             </tbody>
