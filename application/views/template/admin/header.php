@@ -95,7 +95,7 @@
             <nav class="sidenav shadow-right bg-content sidenav-light">
                 <div class="sidenav-menu">
                     <div class="nav accordion" id="accordionSidenav">
-                        <?php $this->load->view('template/menu'); ?>
+                        <?php $this->load->view('template/admin/menu'); ?>
                     </div>
                 </div>
             </nav>
