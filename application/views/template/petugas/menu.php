@@ -7,9 +7,13 @@
         <i class="fas fa-exchange-alt ml-2 mr-3 fa-lg  fa-fw"></i>
         Transaksi
     </a>
-    <a class="nav-link" href="<?php echo site_url('Welcome/vPembayaran'); ?>">
-        <i class="fa fa-user-shield ml-2 mr-3 fa-lg fa-fw"></i>
-        Pembayaran
+    <a class="nav-link" href="<?php echo site_url('Welcome/vSanksi'); ?>">
+        <i class="fa fa-user-injured ml-2 mr-3 fa-lg fa-fw"></i>
+        Sanksi
+    </a>
+    <a type="button" class="nav-link" data-toggle="modal" data-target="#KonfirmasiModal">
+        <i class="fas fa-sign-out-alt ml-2 mr-3 fa-lg fa-fw"></i>
+        Logout
     </a>
 </div>
 <div class="sidenav-footer">

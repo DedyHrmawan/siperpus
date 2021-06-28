@@ -20580,10 +20580,14 @@ pre[class*=language-] {
 .card-1{
   box-shadow: rgba(255, 255, 255, 0.12) 0px 1px 6px 0px;
   border-radius:12px;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(31, 45, 65, 0.125);
 }
 
 .card-body-1{
   padding:10px;
+  
 }
 
 .badge-1{
@@ -20687,4 +20691,9 @@ input:disabled{
   border-radius: 4px;
   position: relative;
   display: inline-block;
+}
+
+.select-modal-width {
+  width: 29rem !important;
+  padding: 10px 10px;
 }

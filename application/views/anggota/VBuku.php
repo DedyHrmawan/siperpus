@@ -55,7 +55,7 @@
         </div>
         <div class="row flex-nowrap mx-0 mt-2 menu-scroll">
             <div class="col-2 pl-0">
-                <a style="text-decoration:none" href="" class="card-1" data-toggle="modal" data-target="#modalUmum">
+                <a style="text-decoration:none" href="" class="card" data-toggle="modal" data-target="#modalUmum">
                     <img class="card-img-top" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" alt="Image">
                     <div class="card-body-1">
                         <h6 class="card-title text-center">Kambing Jantan</h6>
@@ -68,7 +68,6 @@
                                     <td class="p-0">:</td>
                                     <td>
                                         <h6 class="badge-2 badge-pill">Raditya Dika</h6>
-
                                     </td>
                                 </tr>
                                 <tr>
@@ -88,16 +87,19 @@
                                     <td class="p-0">:</td>
                                     <td>
                                         <h6 class="badge-2 badge-pill">20</h6>
-
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+                        <br>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-sm" href="<?php echo site_url('Welcome/vKeranjang'); ?>"><i class="fa fa-plus mr-1"></i>Keranjang</button>
+                        </div>
                     </div>
                 </a>
             </div>
             <div class="col-2 pl-0">
-                <a style="text-decoration:none" href="" class="card-1" data-toggle="modal" data-target="#modalUmum">
+                <a style="text-decoration:none" href="" class="card" data-toggle="modal" data-target="#modalUmum">
                     <img class="card-img-top" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" alt="Image">
                     <div class="card-body-1">
                         <h6 class="card-title text-center">Kambing Jantan</h6>
@@ -133,6 +135,10 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <br>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-plus mr-1"></i>Keranjang</button>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -145,7 +151,7 @@
         </div>
         <div class="row flex-nowrap mx-0 mt-2 menu-scroll">
             <div class="col-2 pl-0">
-                <a style="text-decoration:none" href="" class="card-1" data-toggle="modal" data-target="#modalUmum">
+                <a style="text-decoration:none" href="" class="card" data-toggle="modal" data-target="#modalUmum">
                     <img class="card-img-top" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" alt="Image">
                     <div class="card-body-1">
                         <h6 class="card-title text-center">Kambing Jantan</h6>
@@ -180,6 +186,10 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <br>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-plus mr-1"></i>Keranjang</button>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -192,7 +202,7 @@
         </div>
         <div class="row flex-nowrap mx-0 mt-2 menu-scroll">
             <div class="col-2 pl-0">
-                <a style="text-decoration:none" href="" class="card-1" data-toggle="modal" data-target="#modalUmum">
+                <a style="text-decoration:none" href="" class="card" data-toggle="modal" data-target="#modalUmum">
                     <img class="card-img-top" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" alt="Image">
                     <div class="card-body-1">
                         <h6 class="card-title text-center">Kambing Jantan</h6>
@@ -227,6 +237,10 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <br>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-plus mr-1"></i>Keranjang</button>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -239,7 +253,7 @@
         </div>
         <div class="row flex-nowrap mx-0 mt-2 menu-scroll">
             <div class="col-2 pl-0">
-                <a style="text-decoration:none" href="" class="card-1" data-toggle="modal" data-target="#modalUmum">
+                <a style="text-decoration:none" href="" class="card" data-toggle="modal" data-target="#modalUmum">
                     <img class="card-img-top" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" alt="Image">
                     <div class="card-body-1">
                         <h6 class="card-title text-center">Kambing Jantan</h6>
@@ -274,6 +288,10 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <br>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-plus mr-1"></i>Keranjang</button>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -286,7 +304,7 @@
         </div>
         <div class="row flex-nowrap mx-0 mt-2 menu-scroll">
             <div class="col-2 pl-0">
-                <a style="text-decoration:none" href="" class="card-1" data-toggle="modal" data-target="#modalUmum">
+                <a style="text-decoration:none" href="" class="card" data-toggle="modal" data-target="#modalUmum">
                     <img class="card-img-top" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" alt="Image">
                     <div class="card-body-1">
                         <h6 class="card-title text-center">Kambing Jantan</h6>
@@ -321,6 +339,10 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <br>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-plus mr-1"></i>Keranjang</button>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -333,7 +355,7 @@
         </div>
         <div class="row flex-nowrap mx-0 mt-2 menu-scroll">
             <div class="col-2 pl-0">
-                <a style="text-decoration:none" href="" class="card-1" data-toggle="modal" data-target="#modalUmum">
+                <a style="text-decoration:none" href="" class="card" data-toggle="modal" data-target="#modalUmum">
                     <img class="card-img-top" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" alt="Image">
                     <div class="card-body-1">
                         <h6 class="card-title text-center">Kambing Jantan</h6>
@@ -368,6 +390,10 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <br>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-plus mr-1"></i>Keranjang</button>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -380,7 +406,7 @@
         </div>
         <div class="row flex-nowrap mx-0 mt-2 menu-scroll">
             <div class="col-2 pl-0">
-                <a style="text-decoration:none" href="" class="card-1" data-toggle="modal" data-target="#modalUmum">
+                <a style="text-decoration:none" href="" class="card" data-toggle="modal" data-target="#modalUmum">
                     <img class="card-img-top" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" alt="Image">
                     <div class="card-body-1">
                         <h6 class="card-title text-center">Kambing Jantan</h6>
@@ -415,12 +441,16 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <br>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-plus mr-1"></i>Keranjang</button>
+                        </div>
                     </div>
                 </a>
             </div>
         </div>
 
-        <!-- Modal Buku Umum -->
+        <!-- Modal Buku -->
         <div class="modal fade" id="modalUmum" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -508,7 +538,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-plus mr-1"></i>Keranjang</button>
+                        <a type="submit" class="btn btn-primary" href="<?php echo site_url('Welcome/vKeranjang'); ?>"><i class="fa fa-plus mr-1"></i>Keranjang</a>
                     </div>
                     </form>
                 </div>
