@@ -22,7 +22,7 @@
                                     <th>Jumlah</th>
                                     <th>Tanggal Peminjaman</th>
                                     <th>Tanggal Pengembalian</th>
-                                    <th>Denda</th>
+                                    <th>Sanksi</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
@@ -42,82 +42,6 @@
                         </table>
                     </div>
                 </div>
-                <!-- Modal Tambah Peminjaman -->
-                <div class="modal fade" id="tambahPeminjaman" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Tambah Peminjaman</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="username">Username Anggota</label>
-                                    <input type="text" name="" class="form-control" placeholder="Masukkan Peminjaman" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="Peminjaman">ID Peminjaman</label>
-                                    <input type="text" name="" class="form-control" placeholder="Masukkan Peminjaman" required>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-check mr-1"></i>Simpan</button>
-                            </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal Edit Peminjaman -->
-                <div class="modal fade" id="editPeminjaman" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Edit Peminjaman</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="Peminjaman">Peminjaman</label>
-                                    <input type="text" name="" class="form-control" required>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-check mr-1"></i>Simpan</button>
-                            </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal Hapus -->
-                <div class="modal fade" id="hapusPeminjaman" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Hapus Peminjaman</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <h5>Apakah anda yakin ingin menghapus Peminjaman ini ?</h5>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="hidden" id="" name="">
-                                <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-trash mr-1"></i>Hapus Peminjaman</button>
-                            </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>

@@ -7,6 +7,10 @@
         <i class="fas fa-exchange-alt ml-2 mr-3 fa-lg fa-fw"></i>
         Transaksi
     </a>
+    <a type="button" class="nav-link" data-toggle="modal" data-target="#KonfirmasiModal">
+        <i class="fas fa-sign-out-alt ml-2 mr-3 fa-lg fa-fw"></i>
+        Logout
+    </a>
 </div>
 <div class="sidenav-footer">
     <div class="sidenav-footer-content">

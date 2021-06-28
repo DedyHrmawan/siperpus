@@ -36,13 +36,9 @@
             </a>
         </nav>
     </div>
-    <a class="nav-link" href="<?php echo site_url('Welcome/vAdmin'); ?>">
-        <i class="fa fa-user-edit ml-2 mr-3 fa-lg fa-fw"></i>
-        Admin
-    </a>
-    <a class="nav-link" href="<?php echo site_url('Welcome/vPetugas'); ?>">
-        <i class="fa fa-user-shield ml-2 mr-3 fa-lg fa-fw"></i>
-        Petugas
+    <a type="button" class="nav-link" data-toggle="modal" data-target="#KonfirmasiModal">
+        <i class="fas fa-sign-out-alt ml-2 mr-3 fa-lg fa-fw"></i>
+        Logout
     </a>
 </div>
 <div class="sidenav-footer">

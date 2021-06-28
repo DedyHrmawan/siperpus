@@ -43,13 +43,9 @@
                     <h6 class="dropdown-header d-flex align-items-center">
                         <i data-feather="user"></i>
                         <div class="dropdown-user-details">
-                            <div class="dropdown-user-details-name">Admin</div>
+                            <div class="dropdown-user-details-name">Petugas</div>
                         </div>
                     </h6>
-                    <a type="button" class="dropdown-item" data-toggle="modal" data-target="#KonfirmasiModal">
-                        <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
-                        Logout
-                    </a>
                 </div>
             </li>
             <li class="nav-item dropdown no-caret mr-5 dropdown-notifications list-pemberitahuan">
@@ -84,7 +80,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Tutup</button>
-                    <a href="<?= base_url('HomeController') ?>" type="button" class="btn btn-danger"><i class="fa fa-sign-out-alt mr-1"></i>Keluar</a>
+                    <a href="<?= site_url('HomeController') ?>" type="button" class="btn btn-danger"><i class="fa fa-sign-out-alt mr-1"></i>Keluar</a>
                 </div>
             </div>
         </div>

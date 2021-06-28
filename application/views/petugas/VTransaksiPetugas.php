@@ -24,6 +24,7 @@
                                     <th>Judul Buku</th>
                                     <th>Tanggal Peminjaman</th>
                                     <th>Tanggal Pengembalian</th>
+                                    <th>Sanksi</th>
                                     <th>Status</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -35,6 +36,7 @@
                                     <td>Kambing Betina</td>
                                     <td>12/08/2019</td>
                                     <td>12/08/2020</td>
+                                    <td>Rp. 0</td>
                                     <td>
                                         <div class="badge badge-success badge-pill">Selesai</div>
                                     </td>
@@ -63,8 +65,16 @@
                                     <input type="text" name="" class="form-control" placeholder="Masukkan Transaksi" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Transaksi">ID Transaksi</label>
+                                    <label for="judul">Judul Buku</label>
                                     <input type="text" name="" class="form-control" placeholder="Masukkan Transaksi" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="judul">Tanggal Peminjaman</label>
+                                    <input type="text" name="" class="form-control" placeholder="Masukkan Transaksi" id="tglPinjam" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="judul">Tanggal Pengembalian</label>
+                                    <input type="text" name="" class="form-control" placeholder="Masukkan Transaksi" id="tglKembali" required>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -88,8 +98,32 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="Transaksi">Transaksi</label>
-                                    <input type="text" name="" class="form-control" required>
+                                    <label for="username">Username Anggota</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="judul">Judul Buku</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="judul">Tanggal Peminjaman</label>
+                                    <input type="text" name="" class="form-control" id="tglPinjam">
+                                </div>
+                                <div class="form-group">
+                                    <label for="judul">Tanggal Pengembalian</label>
+                                    <input type="text" name="" class="form-control" id="tglKembali">
+                                </div>
+                                <div class="form-group">
+                                    <label for="sanksi">Sanksi</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="status">Status</label>
+                                    <br>
+                                    <select class="form-control select-modal-width">
+                                        <option value="0">Pinjam</option>
+                                        <option value="1">Selesai</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -137,5 +171,20 @@
             ],
             fixedColumns: false
         });
+    });
+</script>
+<script type="text/javascript">
+    //datepicker dari
+    $('#tglPinjam').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        todayHighlight: true,
+    });
+
+    //datepicker sanpai
+    $('#tglKembali').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        todayHighlight: true,
     });
 </script>

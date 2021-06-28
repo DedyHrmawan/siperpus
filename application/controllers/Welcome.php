@@ -102,11 +102,11 @@ class Welcome extends CI_Controller {
         $this->petugas->view('petugas/VTransaksiPetugas', $data);
     }
 
-    public function vPembayaran()
+    public function vSanksi()
     {
-        $data['title']          = 'Pembayaran | e-Libs';
+        $data['title']          = 'Sanksi | e-Libs';
 
-        $this->petugas->view('petugas/VPembayaran', $data);
+        $this->petugas->view('petugas/VSanksi', $data);
     }
 
     // Controller Anggota
