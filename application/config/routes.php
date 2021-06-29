@@ -52,3 +52,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'HomeController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// pengarang
+$route['pengarang']             = 'PengarangController/vPengarang';
+$route['pengarang/store']       = 'PengarangController/store';
+$route['pengarang/ajxDetail']   = 'PengarangController/ajxDetail';
+$route['pengarang/edit']        = 'PengarangController/edit';
+$route['pengarang/destroy']     = 'PengarangController/destroy';
+
+// penerbit
+$route['penerbit']             = 'PenerbitController/vPenerbit';
+$route['penerbit/store']       = 'PenerbitController/store';
+$route['penerbit/ajxDetail']   = 'PenerbitController/ajxDetail';
+$route['penerbit/edit']        = 'PenerbitController/edit';
+$route['penerbit/destroy']     = 'PenerbitController/destroy';
+
+// kategori
+$route['kategori']             = 'KategoriController/vKategori';
+$route['kategori/store']       = 'KategoriController/store';
+$route['kategori/ajxDetail']   = 'KategoriController/ajxDetail';
+$route['kategori/edit']        = 'KategoriController/edit';
+$route['kategori/destroy']     = 'KategoriController/destroy';
