@@ -11,15 +11,15 @@
         <i class="fas fa-book ml-2 mr-3 fa-lg  fa-fw"></i>
         Buku
     </a>
-    <a class="nav-link" href="<?php echo site_url('admin/PengarangController/vPengarang'); ?>">
+    <a class="nav-link" href="<?php echo site_url('pengarang'); ?>">
         <i class="fas fa-house-user ml-2 mr-3 fa-lg  fa-fw"></i>
         Pengarang
     </a>
-    <a class="nav-link" href="<?php echo site_url('admin/PenerbitController/vPenerbit'); ?>">
+    <a class="nav-link" href="<?php echo site_url('penerbit'); ?>">
         <i class="fa fa-box ml-2 mr-3 fa-lg fa-fw"></i>
         Penerbit
     </a>
-    <a class="nav-link" href="<?php echo site_url('admin/KategoriController/vKategori'); ?>">
+    <a class="nav-link" href="<?php echo site_url('kategori'); ?>">
         <i class="fa fa-list-alt ml-2 mr-3 fa-lg fa-fw"></i>
         Kategori
     </a>

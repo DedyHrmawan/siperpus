@@ -24,22 +24,20 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Andi Publisher</td>
-                                    <td>Malang</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-warning ml-1" data-id="" type="button" data-toggle="modal" data-target="#editPenerbit"><i class="fa fa-edit fa-fw"></i></button>
-                                        <button class="btn btn-sm btn-danger ml-1" data-id="" type="button" data-toggle="modal" data-target="#hapusPenerbit"><i class="fa fa-trash fa-fw"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Gramedia</td>
-                                    <td>Blitar</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-warning ml-1 mt-1" data-id="" type="button" data-toggle="modal" data-target="#editPenerbit"><i class="fa fa-edit fa-fw"></i></button>
-                                        <button class="btn btn-sm btn-danger ml-1 mt-1" data-id="" type="button" data-toggle="modal" data-target="#hapusPenerbit"><i class="fa fa-trash fa-fw"></i></button>
-                                    </td>
-                                </tr>
+                                <?php
+                                    foreach ($penerbits as $item) {
+                                        echo '
+                                            <tr>
+                                                <td>'.$item->NAMA_PENERBIT.'</td>
+                                                <td>'.$item->ALAMAT_PENERBIT.'</td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-warning ml-1 mdlEdit" data-id="'.$item->ID_PENERBIT.'" type="button" data-toggle="modal" data-target="#editPenerbit"><i class="fa fa-edit fa-fw"></i></button>
+                                                    <button class="btn btn-sm btn-danger ml-1 mdlHapus" data-id="'.$item->ID_PENERBIT.'" type="button" data-toggle="modal" data-target="#hapusPenerbit"><i class="fa fa-trash fa-fw"></i></button>
+                                                </td>
+                                            </tr>
+                                        ';
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -54,14 +52,15 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="post" action="<?= site_url('penerbit/store')?>">
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="penerbit">Penerbit</label>
-                                    <input type="text" name="" class="form-control" placeholder="Masukkan Penerbit" required>
+                                    <input type="text" name="NAMA_PENERBIT" class="form-control" placeholder="Masukkan Penerbit" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="alamat">Alamat Penerbit</label>
-                                    <input type="text" name="" class="form-control" placeholder="Masukkan Alamat" required>
+                                    <input type="text" name="ALAMAT_PENERBIT" class="form-control" placeholder="Masukkan Alamat" required>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -83,17 +82,19 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="post" action="<?= site_url('penerbit/edit') ?>">
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="penerbit">Penerbit</label>
-                                    <input type="text" name="" class="form-control" required>
+                                    <input type="text" name="NAMA_PENERBIT" id="mdlEdit_penerbit" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="alamat">Alamat Penerbit</label>
-                                    <input type="text" name="" class="form-control" required>
+                                    <input type="text" name="ALAMAT_PENERBIT" id="mdlEdit_alamat" class="form-control" required>
                                 </div>
                             </div>
                             <div class="modal-footer">
+                                <input name="ID_PENERBIT" type="hidden" id="mdlEdit_id" />
                                 <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-check mr-1"></i>Simpan</button>
                             </div>
@@ -111,11 +112,12 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="post" action="<?= site_url('penerbit/destroy')?>">
                             <div class="modal-body">
                                 <h5>Apakah anda yakin ingin menghapus Penerbit ini ?</h5>
                             </div>
                             <div class="modal-footer">
-                                <input type="hidden" id="" name="">
+                                <input type="hidden" id="mdlHapus_id" name="ID_PENERBIT">
                                 <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-trash mr-1"></i>Hapus Penerbit</button>
                             </div>
@@ -139,4 +141,22 @@
             fixedColumns: false
         });
     });
+    $('#dataTablePenerbit tbody').on('click', '.mdlEdit', function(){
+        const id = $(this).data('id')
+        $.ajax({
+            url: '<?= site_url('penerbit/ajxDetail')?>',
+            method: 'post',
+            data: {ID_PENERBIT: id},
+            success: function(res){
+                res = JSON.parse(res)
+                $('#mdlEdit_penerbit').val(res.NAMA_PENERBIT)
+                $('#mdlEdit_alamat').val(res.ALAMAT_PENERBIT)
+                $('#mdlEdit_id').val(id)
+            }
+        })
+    })
+    $('#dataTablePenerbit tbody').on('click', '.mdlHapus', function(){
+        const id = $(this).data('id')
+        $('#mdlHapus_id').val(id)
+    })
 </script>

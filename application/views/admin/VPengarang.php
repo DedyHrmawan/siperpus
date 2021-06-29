@@ -23,20 +23,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Gordon Ramzi</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-warning ml-1" data-id="" type="button" data-toggle="modal" data-target="#editPengarang"><i class="fa fa-edit fa-fw"></i></button>
-                                        <button class="btn btn-sm btn-danger ml-1" data-id="" type="button" data-toggle="modal" data-target="#hapusPengarang"><i class="fa fa-trash fa-fw"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Chef Juna</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-warning ml-1 mt-1" data-id="" type="button" data-toggle="modal" data-target="#editPengarang"><i class="fa fa-edit fa-fw"></i></button>
-                                        <button class="btn btn-sm btn-danger ml-1 mt-1" data-id="" type="button" data-toggle="modal" data-target="#hapusPengarang"><i class="fa fa-trash fa-fw"></i></button>
-                                    </td>
-                                </tr>
+                                <?php
+                                    foreach($pengarangs as $item){
+                                        echo '
+                                            <tr>
+                                                <td>'.$item->NAMA_PENGARANG.'</td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-warning ml-1 mdlEdit" data-id="'.$item->ID_PENGARANG.'" type="button" data-toggle="modal" data-target="#editPengarang"><i class="fa fa-edit fa-fw"></i></button>
+                                                    <button class="btn btn-sm btn-danger ml-1 mdlHapus" data-id="'.$item->ID_PENGARANG.'" type="button" data-toggle="modal" data-target="#hapusPengarang"><i class="fa fa-trash fa-fw"></i></button>
+                                                </td>
+                                            </tr>
+                                        ';
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -52,9 +51,10 @@
                                 </button>
                             </div>
                             <div class="modal-body">
+                            <form method="post" action="<?= site_url('pengarang/store')?>">
                                 <div class="form-group">
                                     <label for="Pengarang">Pengarang</label>
-                                    <input type="text" name="" class="form-control" placeholder="Masukkan Pengarang" required>
+                                    <input type="text" name="NAMA_PENGARANG" class="form-control" placeholder="Masukkan Pengarang" required>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -76,13 +76,15 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="post" action="<?= site_url('pengarang/edit')?>">
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="Pengarang">Pengarang</label>
-                                    <input type="text" name="" class="form-control" required>
+                                    <input type="text" id="mdlEdit_pengarang" name="NAMA_PENGARANG" class="form-control" required>
                                 </div>
                             </div>
                             <div class="modal-footer">
+                                <input type="hidden" name="ID_PENGARANG" id="mdlEdit_id" />
                                 <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-check mr-1"></i>Simpan</button>
                             </div>
@@ -100,11 +102,12 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="post" action="<?= site_url('pengarang/destroy')?>">
                             <div class="modal-body">
                                 <h5>Apakah anda yakin ingin menghapus Pengarang ini ?</h5>
                             </div>
                             <div class="modal-footer">
-                                <input type="hidden" id="" name="">
+                                <input type="hidden" id="mdlHapus_id" name="ID_PENGARANG">
                                 <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-trash mr-1"></i>Hapus Pengarang</button>
                             </div>
@@ -128,4 +131,21 @@
             fixedColumns: false
         });
     });
+    $('#dataTablePengarang tbody').on('click', '.mdlEdit', function(){
+        const id = $(this).data('id')
+        $.ajax({
+            url: '<?= site_url('pengarang/ajxDetail')?>',
+            method: 'post',
+            data: {ID_PENGARANG: id},
+            success: function(res){
+                res = JSON.parse(res)
+                $('#mdlEdit_pengarang').val(res.NAMA_PENGARANG)
+                $('#mdlEdit_id').val(id)
+            }
+        })
+    })
+    $('#dataTablePengarang tbody').on('click', '.mdlHapus', function(){
+        const id = $(this).data('id')
+        $('#mdlHapus_id').val(id)
+    })
 </script>

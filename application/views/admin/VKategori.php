@@ -23,20 +23,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Horor</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-warning ml-1" data-id="" type="button" data-toggle="modal" data-target="#editKategori"><i class="fa fa-edit fa-fw"></i></button>
-                                        <button class="btn btn-sm btn-danger ml-1" data-id="" type="button" data-toggle="modal" data-target="#hapusKategori"><i class="fa fa-trash fa-fw"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Misteri</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-warning ml-1 mt-1" data-id="" type="button" data-toggle="modal" data-target="#editKategori"><i class="fa fa-edit fa-fw"></i></button>
-                                        <button class="btn btn-sm btn-danger ml-1 mt-1" data-id="" type="button" data-toggle="modal" data-target="#hapusKategori"><i class="fa fa-trash fa-fw"></i></button>
-                                    </td>
-                                </tr>
+                                <?php
+                                    foreach ($kategoris as $item) {
+                                        echo '
+                                            <tr>
+                                                <td>'.$item->NAMA_KATEGORI.'</td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-warning ml-1 mdlEdit" data-id="'.$item->ID_KATEGORI.'" type="button" data-toggle="modal" data-target="#editKategori"><i class="fa fa-edit fa-fw"></i></button>
+                                                    <button class="btn btn-sm btn-danger ml-1 mdlHapus" data-id="'.$item->ID_KATEGORI.'" type="button" data-toggle="modal" data-target="#hapusKategori"><i class="fa fa-trash fa-fw"></i></button>
+                                                </td>
+                                            </tr>
+                                        ';
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -51,10 +50,11 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="post" action="<?= site_url('kategori/store')?>">
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="kategori">Kategori</label>
-                                    <input type="text" name="" class="form-control" placeholder="Masukkan Kategori" required>
+                                    <input type="text" name="NAMA_KATEGORI" class="form-control" placeholder="Masukkan Kategori" required>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -76,13 +76,15 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="post" action="<?= site_url('kategori/edit')?>">
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="kategori">Kategori</label>
-                                    <input type="text" name="" class="form-control" required>
+                                    <input type="text" name="NAMA_KATEGORI" id="mdlEdit_kategori" class="form-control" required>
                                 </div>
                             </div>
                             <div class="modal-footer">
+                                <input type="hidden" id="mdlEdit_id" name="ID_KATEGORI">
                                 <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-check mr-1"></i>Simpan</button>
                             </div>
@@ -100,11 +102,12 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="post" action="<?= site_url('kategori/destroy')?>">
                             <div class="modal-body">
                                 <h5>Apakah anda yakin ingin menghapus Kategori ini ?</h5>
                             </div>
                             <div class="modal-footer">
-                                <input type="hidden" id="" name="">
+                                <input type="hidden" id="mdlHapus_id" name="ID_KATEGORI">
                                 <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-trash mr-1"></i>Hapus Kategori</button>
                             </div>
@@ -128,4 +131,21 @@
             fixedColumns: false
         });
     });
+    $('#dataTableKategori tbody').on('click', '.mdlEdit', function(){
+        const id = $(this).data('id')
+        $.ajax({
+            url: '<?= site_url('kategori/ajxDetail')?>',
+            method: 'post',
+            data: {ID_KATEGORI: id},
+            success: function(res){
+                res = JSON.parse(res)
+                $('#mdlEdit_kategori').val(res.NAMA_KATEGORI)
+                $('#mdlEdit_id').val(id)
+            }
+        })
+    })
+    $('#dataTableKategori tbody').on('click', '.mdlHapus', function(){
+        const id = $(this).data('id')
+        $('#mdlHapus_id').val(id)
+    })
 </script>
