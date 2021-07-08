@@ -11,7 +11,7 @@ class PengarangController extends CI_Controller
         $data['title']      = 'Pengarang | e-Libs';
         $data['pengarangs'] = $this->Pengarang->getAll(); 
 
-        $this->admin->view('admin/VPengarang', $data);
+        $this->admintemplate->view('admin/VPengarang', $data);
     }
     public function store(){
         $param = $_POST;

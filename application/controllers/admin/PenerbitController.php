@@ -11,7 +11,7 @@ class PenerbitController extends CI_Controller
         $data['title']      = 'Penerbit | e-Libs';
         $data['penerbits'] = $this->Penerbit->getAll(); 
 
-        $this->admin->view('admin/VPenerbit', $data);
+        $this->admintemplate->view('admin/VPenerbit', $data);
     }
     public function store(){
         $param = $_POST;

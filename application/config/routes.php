@@ -54,22 +54,46 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 // pengarang
-$route['pengarang']             = 'PengarangController/vPengarang';
-$route['pengarang/store']       = 'PengarangController/store';
-$route['pengarang/ajxDetail']   = 'PengarangController/ajxDetail';
-$route['pengarang/edit']        = 'PengarangController/edit';
-$route['pengarang/destroy']     = 'PengarangController/destroy';
+$route['pengarang']             = 'admin/PengarangController/vPengarang';
+$route['pengarang/store']       = 'admin/PengarangController/store';
+$route['pengarang/ajxDetail']   = 'admin/PengarangController/ajxDetail';
+$route['pengarang/edit']        = 'admin/PengarangController/edit';
+$route['pengarang/destroy']     = 'admin/PengarangController/destroy';
 
 // penerbit
-$route['penerbit']             = 'PenerbitController/vPenerbit';
-$route['penerbit/store']       = 'PenerbitController/store';
-$route['penerbit/ajxDetail']   = 'PenerbitController/ajxDetail';
-$route['penerbit/edit']        = 'PenerbitController/edit';
-$route['penerbit/destroy']     = 'PenerbitController/destroy';
+$route['penerbit']             = 'admin/PenerbitController/vPenerbit';
+$route['penerbit/store']       = 'admin/PenerbitController/store';
+$route['penerbit/ajxDetail']   = 'admin/PenerbitController/ajxDetail';
+$route['penerbit/edit']        = 'admin/PenerbitController/edit';
+$route['penerbit/destroy']     = 'admin/PenerbitController/destroy';
 
 // kategori
-$route['kategori']             = 'KategoriController/vKategori';
-$route['kategori/store']       = 'KategoriController/store';
-$route['kategori/ajxDetail']   = 'KategoriController/ajxDetail';
-$route['kategori/edit']        = 'KategoriController/edit';
-$route['kategori/destroy']     = 'KategoriController/destroy';
+$route['kategori']             = 'admin/KategoriController/vKategori';
+$route['kategori/store']       = 'admin/KategoriController/store';
+$route['kategori/ajxDetail']   = 'admin/KategoriController/ajxDetail';
+$route['kategori/edit']        = 'admin/KategoriController/edit';
+$route['kategori/destroy']     = 'admin/KategoriController/destroy';
+
+// petugas
+$route['petugas']             = 'admin/PetugasController/vPetugas';
+$route['petugas/store']       = 'admin/PetugasController/store';
+$route['petugas/ajxDetail']   = 'admin/PetugasController/ajxDetail';
+$route['petugas/edit']        = 'admin/PetugasController/edit';
+$route['petugas/destroy']     = 'admin/PetugasController/destroy';
+
+// anggota
+$route['anggota']             = 'admin/AnggotaController/vAnggota';
+$route['anggota/store']       = 'admin/AnggotaController/store';
+$route['anggota/ajxDetail']   = 'admin/AnggotaController/ajxDetail';
+$route['anggota/edit']        = 'admin/AnggotaController/edit';
+$route['anggota/destroy']     = 'admin/AnggotaController/destroy';
+
+// buku
+$route['buku']             = 'admin/BukuController/vBuku';
+$route['buku/store']       = 'admin/BukuController/store';
+$route['buku/ajxDetail']   = 'admin/BukuController/ajxDetail';
+$route['buku/edit']        = 'admin/BukuController/edit';
+$route['buku/destroy']     = 'admin/BukuController/destroy';
+
+//Overview
+$route['admin-overview']     = 'admin/AdminOverviewController/vOverview';

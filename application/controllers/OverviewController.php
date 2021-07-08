@@ -9,6 +9,6 @@ class OverviewController extends CI_Controller
     {
         $data['title']          = 'Overview | e-Libs';
 
-        $this->admin->view('admin/VOverview', $data);
+        $this->admintemplate->view('admin/VOverview', $data);
     }
 }

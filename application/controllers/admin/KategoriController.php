@@ -11,7 +11,7 @@ class KategoriController extends CI_Controller
         $data['title']      = 'Kategori | e-Libs';
         $data['kategoris']  = $this->Kategori->getAll(); 
 
-        $this->admin->view('admin/VKategori', $data);
+        $this->admintemplate->view('admin/VKategori', $data);
     }
     public function store(){
         $param = $_POST;

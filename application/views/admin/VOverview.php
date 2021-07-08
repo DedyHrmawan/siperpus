@@ -17,10 +17,10 @@
                         <div class="d-flex flex-row">
                             <div id="image_div">
                                 <img class="" src="<?= base_url(); ?>assets/img/circle_info.svg" alt="Responsive image"></img>
-                                <p id="image_label"><span>10</span></p>
+                                <p id="image_label"><span><?= $totalAnggota?></span></p>
                             </div>
                             <div class="mt-4">
-                                <div class="text-md font-weight-bold text-black mb-2">Jumlah Pengguna</div>
+                                <div class="text-md font-weight-bold text-black mb-2">Jumlah Anggota</div>
                                 <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2">
                                     <i class="mr-1" data-feather="trending-up"></i>
                                     1%
@@ -43,7 +43,7 @@
                         <div class="d-flex flex-row">
                             <div id="image_div">
                                 <img class="" src="<?= base_url(); ?>assets/img/circle_info.svg" alt="Responsive image"></img>
-                                <p id="image_label"><span>10</span></p>
+                                <p id="image_label"><span><?= $totalPetugas?></span></p>
                             </div>
                             <div class="mt-4">
                                 <div class="text-md font-weight-bold text-black mb-2">Jumlah Petugas</div>
@@ -107,22 +107,21 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>gordonramzi</td>
-                                    <td>Ramonridwan@protonmail.com</td>
-                                    <td>Ramon Ridwan</td>
-                                    <td>Laki-laki</td>
-                                    <td>Blitar</td>
-                                    <td>081234526723</td>
-                                </tr>
-                                <tr>
-                                    <td>gordonramzi</td>
-                                    <td>Ramonridwan@protonmail.com</td>
-                                    <td>Ramon Ridwan</td>
-                                    <td>Laki-laki</td>
-                                    <td>Blitar</td>
-                                    <td>081234526723</td>
-                                </tr>
+                                <?php
+                                    foreach ($anggotas as $item) {
+                                        $jk = ($item->JK_ANGGOTA == "1" ? 'Laki-Laki' : 'Perempuan');
+                                        echo '
+                                            <tr>
+                                                <td>'.$item->USERNAME_ANGGOTA.'</td>
+                                                <td>'.$item->EMAIL_ANGGOTA.'</td>
+                                                <td>'.$item->NAMA_ANGGOTA.'</td>
+                                                <td>'.$jk.'</td>
+                                                <td>'.$item->ALAMAT_ANGGOTA.'</td>
+                                                <td>'.$item->TELP_ANGGOTA.'</td>
+                                            </tr>
+                                        ';
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -149,22 +148,21 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>gordonramzi</td>
-                                    <td>Ramonridwan@protonmail.com</td>
-                                    <td>Ramon Ridwan</td>
-                                    <td>Laki-laki</td>
-                                    <td>Blitar</td>
-                                    <td>081234526723</td>
-                                </tr>
-                                <tr>
-                                    <td>gordonramzi</td>
-                                    <td>Ramonridwan@protonmail.com</td>
-                                    <td>Ramon Ridwan</td>
-                                    <td>Laki-laki</td>
-                                    <td>Blitar</td>
-                                    <td>081234526723</td>
-                                </tr>
+                                <?php
+                                    foreach ($petugass as $item) {
+                                        $jk = ($item->JK_PETUGAS == "1" ? 'Laki-Laki' : 'Perempuan');
+                                        echo '
+                                            <tr>
+                                                <td>'.$item->USERNAME_PETUGAS.'</td>
+                                                <td>'.$item->EMAIL_PETUGAS.'</td>
+                                                <td>'.$item->NAMA_PETUGAS.'</td>
+                                                <td>'.$jk.'</td>
+                                                <td>'.$item->ALAMAT_PETUGAS.'</td>
+                                                <td>'.$item->TELP_PETUGAS.'</td>
+                                            </tr>
+                                        ';
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>
