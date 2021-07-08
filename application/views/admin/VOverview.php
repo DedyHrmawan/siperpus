@@ -7,7 +7,7 @@
     <div class="mr-4 mb-4 font-weight-bold">
         <h2>Overview</h2>
     </div>
-    
+
     <div class="row mt-4">
         <div class="col-xl-4 col-md-6 mb-4">
             <!-- Dashboard info widget 1-->
@@ -16,19 +16,13 @@
                     <div class="d-flex align-items-center">
                         <div class="d-flex flex-row">
                             <div id="image_div">
-                                <img class="" src="<?= base_url(); ?>assets/img/circle_info.svg" alt="Responsive image"></img>
-                                <p id="image_label"><span><?= $totalAnggota?></span></p>
+                                <div class="teksgambar">
+                                    <p><?= $totalAnggota ?></p>
+                                </div>
                             </div>
-                            <div class="mt-4">
+                            <div class="mt-4 p-3 ">
                                 <div class="text-md font-weight-bold text-black mb-2">Jumlah Anggota</div>
-                                <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2">
-                                    <i class="mr-1" data-feather="trending-up"></i>
-                                    1%
-                                    <img class="img-fluid ml-3" style="width: 40%;" src="<?= base_url(); ?>assets/img/chart.svg" alt="Responsive image"></img>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row ml-4">
-                                <i class="fa fa-ellipsis-h"></i>
+                                <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2"></div>
                             </div>
                         </div>
                     </div>
@@ -36,25 +30,19 @@
             </div>
         </div>
         <div class="col-xl-4 col-md-6 mb-4">
-            <!-- Dashboard info widget 3-->
+            <!-- Dashboard info widget 1-->
             <div class="card border-top-0 border-bottom-0 border-right-0 border-left-lg border-primary h-100">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div class="d-flex flex-row">
                             <div id="image_div">
-                                <img class="" src="<?= base_url(); ?>assets/img/circle_info.svg" alt="Responsive image"></img>
-                                <p id="image_label"><span><?= $totalPetugas?></span></p>
+                                <div class="teksgambar">
+                                    <p><?= $totalPetugas ?></p>
+                                </div>
                             </div>
-                            <div class="mt-4">
+                            <div class="mt-4 p-3">
                                 <div class="text-md font-weight-bold text-black mb-2">Jumlah Petugas</div>
-                                <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2">
-                                    <i class="mr-1" data-feather="trending-up"></i>
-                                    1%
-                                    <img class="img-fluid ml-3" style="width: 40%;" src="<?= base_url(); ?>assets/img/chart.svg" alt="Responsive image"></img>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row ml-4">
-                                <i class="fa fa-ellipsis-h"></i>
+                                <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2"></div>
                             </div>
                         </div>
                     </div>
@@ -62,31 +50,26 @@
             </div>
         </div>
         <div class="col-xl-4 col-md-6 mb-4">
-            <!-- Dashboard info widget 3-->
+            <!-- Dashboard info widget 1-->
             <div class="card border-top-0 border-bottom-0 border-right-0 border-left-lg border-primary h-100">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div class="d-flex flex-row">
                             <div id="image_div">
-                                <img class="" src="<?= base_url(); ?>assets/img/circle_info.svg" alt="Responsive image"></img>
-                                <p id="image_label"><span>10</span></p>
-                            </div>
-                            <div class="mt-4">
-                                <div class="text-md font-weight-bold text-black mb-2">Jumlah Transaksi</div>
-                                <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2">
-                                    <i class="mr-1" data-feather="trending-up"></i>
-                                    1%
-                                    <img class="img-fluid ml-3" style="width: 40%;" src="<?= base_url(); ?>assets/img/chart.svg" alt="Responsive image"></img>
+                                <div class="teksgambar">
+                                    <p>10</p>
                                 </div>
                             </div>
-                            <div class="d-flex flex-row ml-4">
-                                <i class="fa fa-ellipsis-h"></i>
+                            <div class="mt-4 p-3">
+                                <div class="text-md font-weight-bold text-black mb-2">Jumlah Transaksi</div>
+                                <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Daftar Anggota -->
         <div class="col-xl-12 mb-4">
             <div class="card card-header-actions h-100">
@@ -108,19 +91,19 @@
                             </thead>
                             <tbody>
                                 <?php
-                                    foreach ($anggotas as $item) {
-                                        $jk = ($item->JK_ANGGOTA == "1" ? 'Laki-Laki' : 'Perempuan');
-                                        echo '
+                                foreach ($anggotas as $item) {
+                                    $jk = ($item->JK_ANGGOTA == "1" ? 'Laki-Laki' : 'Perempuan');
+                                    echo '
                                             <tr>
-                                                <td>'.$item->USERNAME_ANGGOTA.'</td>
-                                                <td>'.$item->EMAIL_ANGGOTA.'</td>
-                                                <td>'.$item->NAMA_ANGGOTA.'</td>
-                                                <td>'.$jk.'</td>
-                                                <td>'.$item->ALAMAT_ANGGOTA.'</td>
-                                                <td>'.$item->TELP_ANGGOTA.'</td>
+                                                <td>' . $item->USERNAME_ANGGOTA . '</td>
+                                                <td>' . $item->EMAIL_ANGGOTA . '</td>
+                                                <td>' . $item->NAMA_ANGGOTA . '</td>
+                                                <td>' . $jk . '</td>
+                                                <td>' . $item->ALAMAT_ANGGOTA . '</td>
+                                                <td>' . $item->TELP_ANGGOTA . '</td>
                                             </tr>
                                         ';
-                                    }
+                                }
                                 ?>
                             </tbody>
                         </table>
@@ -149,19 +132,19 @@
                             </thead>
                             <tbody>
                                 <?php
-                                    foreach ($petugass as $item) {
-                                        $jk = ($item->JK_PETUGAS == "1" ? 'Laki-Laki' : 'Perempuan');
-                                        echo '
+                                foreach ($petugass as $item) {
+                                    $jk = ($item->JK_PETUGAS == "1" ? 'Laki-Laki' : 'Perempuan');
+                                    echo '
                                             <tr>
-                                                <td>'.$item->USERNAME_PETUGAS.'</td>
-                                                <td>'.$item->EMAIL_PETUGAS.'</td>
-                                                <td>'.$item->NAMA_PETUGAS.'</td>
-                                                <td>'.$jk.'</td>
-                                                <td>'.$item->ALAMAT_PETUGAS.'</td>
-                                                <td>'.$item->TELP_PETUGAS.'</td>
+                                                <td>' . $item->USERNAME_PETUGAS . '</td>
+                                                <td>' . $item->EMAIL_PETUGAS . '</td>
+                                                <td>' . $item->NAMA_PETUGAS . '</td>
+                                                <td>' . $jk . '</td>
+                                                <td>' . $item->ALAMAT_PETUGAS . '</td>
+                                                <td>' . $item->TELP_PETUGAS . '</td>
                                             </tr>
                                         ';
-                                    }
+                                }
                                 ?>
                             </tbody>
                         </table>

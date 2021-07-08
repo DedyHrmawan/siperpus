@@ -71,7 +71,7 @@
                                 <div class="form-group">
                                     <label for="stok">Kategori Buku</label>
                                     <br>
-                                    <select name="ID_KATEGORI" class="form-control">
+                                    <select name="ID_KATEGORI" class="form-control select-modal-width">
                                         <?php
                                             foreach ($kategoris as $item) {
                                                 echo '
@@ -84,7 +84,7 @@
                                 <div class="form-group">
                                     <label for="stok">Pengarang</label>
                                     <br>
-                                    <select name="ID_PENGARANG" class="form-control">
+                                    <select name="ID_PENGARANG" class="form-control select-modal-width">
                                         <?php
                                             foreach ($pengarangs as $item) {
                                                 echo '
@@ -97,7 +97,7 @@
                                 <div class="form-group">
                                     <label for="stok">Penerbit</label>
                                     <br>
-                                    <select name="ID_PENERBIT" class="form-control">
+                                    <select name="ID_PENERBIT" class="form-control select-modal-width">
                                         <?php
                                             foreach ($penerbits as $item) {
                                                 echo '
@@ -149,7 +149,7 @@
                                 <div class="form-group">
                                     <label for="stok">Kategori Buku</label>
                                     <br>
-                                    <select name="ID_KATEGORI" id="mdlEdit_kategori" class="form-control">
+                                    <select name="ID_KATEGORI" id="mdlEdit_kategori" class="form-control select-modal-width">
                                         <?php
                                             foreach ($kategoris as $item) {
                                                 echo '
@@ -162,7 +162,7 @@
                                 <div class="form-group">
                                     <label for="stok">Pengarang</label>
                                     <br>
-                                    <select name="ID_PENGARANG" id="mdlEdit_pengarang" class="form-control">
+                                    <select name="ID_PENGARANG" id="mdlEdit_pengarang" class="form-control select-modal-width">
                                         <?php
                                             foreach ($pengarangs as $item) {
                                                 echo '
@@ -175,7 +175,7 @@
                                 <div class="form-group">
                                     <label for="stok">Penerbit</label>
                                     <br>
-                                    <select name="ID_PENERBIT" id="mdlEdit_penerbit" class="form-control">
+                                    <select name="ID_PENERBIT" id="mdlEdit_penerbit" class="form-control select-modal-width">
                                         <?php
                                             foreach ($penerbits as $item) {
                                                 echo '

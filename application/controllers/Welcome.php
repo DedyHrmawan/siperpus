@@ -80,13 +80,6 @@ class Welcome extends CI_Controller {
         $this->kepalatemplate->view('kepalaperpus/VAdmin', $data);
     }
 
-	public function vPetugas()
-    {
-        $data['title']          = 'Petugas | e-Libs';
-
-        $this->kepalatemplate->view('kepalaperpus/VPetugas', $data);
-    }
-
     //Controller Petugas
     public function vOverviewPetugas()
     {

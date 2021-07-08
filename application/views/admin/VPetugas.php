@@ -29,23 +29,23 @@
                             </thead>
                             <tbody>
                                 <?php
-                                    foreach($petugass as $item){
-                                        $jk = ($item->JK_PETUGAS == "1" ? "Laki-Laki" : "Perempuan");
-                                        echo '
+                                foreach ($petugass as $item) {
+                                    $jk = ($item->JK_PETUGAS == "1" ? "Laki-Laki" : "Perempuan");
+                                    echo '
                                             <tr>
-                                                <td>'.$item->USERNAME_PETUGAS.'</td>
-                                                <td>'.$item->EMAIL_PETUGAS.'</td>
-                                                <td>'.$item->NAMA_PETUGAS.'</td>
-                                                <td>'.$jk.'</td>
-                                                <td>'.$item->ALAMAT_PETUGAS.'</td>
-                                                <td>'.$item->TELP_PETUGAS.'</td>
+                                                <td>' . $item->USERNAME_PETUGAS . '</td>
+                                                <td>' . $item->EMAIL_PETUGAS . '</td>
+                                                <td>' . $item->NAMA_PETUGAS . '</td>
+                                                <td>' . $jk . '</td>
+                                                <td>' . $item->ALAMAT_PETUGAS . '</td>
+                                                <td>' . $item->TELP_PETUGAS . '</td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-warning ml-1 mdlEdit" data-id="'.$item->USERNAME_PETUGAS.'" type="button" data-toggle="modal" data-target="#editPetugas"><i class="fa fa-edit fa-fw"></i></button>
-                                                    <button class="btn btn-sm btn-danger ml-1 mdlHapus" data-id="'.$item->USERNAME_PETUGAS.'" type="button" data-toggle="modal" data-target="#hapusPetugas"><i class="fa fa-trash fa-fw"></i></button>
+                                                    <button class="btn btn-sm btn-warning ml-1 mdlEdit" data-id="' . $item->USERNAME_PETUGAS . '" type="button" data-toggle="modal" data-target="#editPetugas"><i class="fa fa-edit fa-fw"></i></button>
+                                                    <button class="btn btn-sm btn-danger ml-1 mdlHapus" data-id="' . $item->USERNAME_PETUGAS . '" type="button" data-toggle="modal" data-target="#hapusPetugas"><i class="fa fa-trash fa-fw"></i></button>
                                                 </td>
                                             </tr>
                                         ';
-                                    }
+                                }
                                 ?>
                             </tbody>
                         </table>
@@ -61,51 +61,51 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form method="post" action="<?= site_url('petugas/store')?>">
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="username">Username Petugas</label>
-                                    <input type="text" name="USERNAME_PETUGAS" class="form-control" placeholder="Masukkan Username" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Petugas</label>
-                                    <input type="email" name="EMAIL_PETUGAS" class="form-control" placeholder="Masukkan Email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Password Petugas</label>
-                                    <input type="password" name="PASSWORD_PETUGAS" class="form-control" placeholder="Masukkan Password" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="nama">Nama Petugas</label>
-                                    <input type="text" name="NAMA_PETUGAS" class="form-control" placeholder="Masukkan Nama" required></input>
-                                </div>
-                                <div class="form-group">
-                                    <label for="jk">Jenis Kelamin</label>
-                                    <br>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input ml-4" type="radio" name="JK_PETUGAS" id="laki" value="1">
-                                        <label class="form-check-label" for="laki">Laki-Laki</label>
+                            <form method="post" action="<?= site_url('petugas/store') ?>">
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="username">Username Petugas</label>
+                                        <input type="text" name="USERNAME_PETUGAS" class="form-control" placeholder="Masukkan Username" required>
                                     </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input ml-4" type="radio" name="JK_PETUGAS" id="perempuan" value="2">
-                                        <label class="form-check-label" for="perempuan">Perempuan</label>
+                                    <div class="form-group">
+                                        <label for="email">Email Petugas</label>
+                                        <input type="email" name="EMAIL_PETUGAS" class="form-control" placeholder="Masukkan Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password Petugas</label>
+                                        <input type="password" name="PASSWORD_PETUGAS" class="form-control" placeholder="Masukkan Password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nama">Nama Petugas</label>
+                                        <input type="text" name="NAMA_PETUGAS" class="form-control" placeholder="Masukkan Nama" required></input>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="jk">Jenis Kelamin</label>
+                                        <br>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="laki" name="JK_PETUGAS" class="custom-control-input" id="laki" value="1">
+                                            <label class="custom-control-label" for="laki">Laki-Laki</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="perempuan" name="JK_PETUGAS" class="custom-control-input" id="perempuan" value="2">
+                                            <label class="custom-control-label" for="perempuan">Perempuan</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="alamat">Alamat</label>
+                                        <br>
+                                        <input type="text" name="ALAMAT_PETUGAS" class="form-control" placeholder="Masukkan Alamat" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telp">No Telepon</label>
+                                        <br>
+                                        <input type="number" name="TELP_PETUGAS" class="form-control" placeholder="Masukkan No Telepon" required>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="alamat">Alamat</label>
-                                    <br>
-                                    <input type="text" name="ALAMAT_PETUGAS" class="form-control" placeholder="Masukkan Alamat" required>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-check mr-1"></i>Simpan</button>
                                 </div>
-                                <div class="form-group">
-                                    <label for="telp">No Telepon</label>
-                                    <br>
-                                    <input type="number" name="TELP_PETUGAS" class="form-control" placeholder="Masukkan No Telepon" required>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-check mr-1"></i>Simpan</button>
-                            </div>
                             </form>
                         </div>
                     </div>
@@ -121,52 +121,52 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form method="post" action="<?= site_url('petugas/edit')?>">
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="username">Username Petugas</label>
-                                    <input type="text" name="USERNAME_PETUGAS" id="mdlEdit_username" class="form-control" placeholder="Masukkan Username" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Petugas</label>
-                                    <input type="email" name="EMAIL_PETUGAS" id="mdlEdit_email" class="form-control" placeholder="Masukkan Email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Password Petugas</label>
-                                    <input type="password" name="PASSWORD_PETUGAS" id="mdlEdit_password" class="form-control" placeholder="Masukkan Password" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="nama">Nama Petugas</label>
-                                    <input type="text" name="NAMA_PETUGAS" id="mdlEdit_petugas" class="form-control" placeholder="Masukkan Nama" required></input>
-                                </div>
-                                <div class="form-group">
-                                    <label for="jk">Jenis Kelamin</label>
-                                    <br>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input ml-4" type="radio" name="JK_PETUGAS" id="mdlEdit_jk_laki" value="1">
-                                        <label class="form-check-label" for="laki">Laki-Laki</label>
+                            <form method="post" action="<?= site_url('petugas/edit') ?>">
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="username">Username Petugas</label>
+                                        <input type="text" name="USERNAME_PETUGAS" id="mdlEdit_username" class="form-control" placeholder="Masukkan Username" required>
                                     </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input ml-4" type="radio" name="JK_PETUGAS" id="mdlEdit_jk_perempuan" value="2">
-                                        <label class="form-check-label" for="perempuan">Perempuan</label>
+                                    <div class="form-group">
+                                        <label for="email">Email Petugas</label>
+                                        <input type="email" name="EMAIL_PETUGAS" id="mdlEdit_email" class="form-control" placeholder="Masukkan Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password Petugas</label>
+                                        <input type="password" name="PASSWORD_PETUGAS" id="mdlEdit_password" class="form-control" placeholder="Masukkan Password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nama">Nama Petugas</label>
+                                        <input type="text" name="NAMA_PETUGAS" id="mdlEdit_petugas" class="form-control" placeholder="Masukkan Nama" required></input>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="jk">Jenis Kelamin</label>
+                                        <br>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" name="JK_PETUGAS" class="custom-control-input" id="mdlEdit_jk_laki" value="1">
+                                            <label class="custom-control-label" for="mdlEdit_jk_laki">Laki-Laki</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" name="JK_PETUGAS" class="custom-control-input" id="mdlEdit_jk_perempuan" value="2">
+                                            <label class="custom-control-label" for="mdlEdit_jk_perempuan">Perempuan</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="alamat">Alamat</label>
+                                        <br>
+                                        <input type="text" name="ALAMAT_PETUGAS" id="mdlEdit_alamat" class="form-control" placeholder="Masukkan Alamat" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telp">No Telepon</label>
+                                        <br>
+                                        <input type="number" name="TELP_PETUGAS" id="mdlEdit_telp" class="form-control" placeholder="Masukkan No Telepon" required>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="alamat">Alamat</label>
-                                    <br>
-                                    <input type="text" name="ALAMAT_PETUGAS" id="mdlEdit_alamat" class="form-control" placeholder="Masukkan Alamat" required>
+                                <div class="modal-footer">
+                                    <input type="hidden" id="mdlEdit_id" name="USERNAMEOLD_PETUGAS" />
+                                    <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-check mr-1"></i>Simpan</button>
                                 </div>
-                                <div class="form-group">
-                                    <label for="telp">No Telepon</label>
-                                    <br>
-                                    <input type="number" name="TELP_PETUGAS" id="mdlEdit_telp" class="form-control" placeholder="Masukkan No Telepon" required>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="hidden" id="mdlEdit_id" name="USERNAMEOLD_PETUGAS" />
-                                <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-check mr-1"></i>Simpan</button>
-                            </div>
                             </form>
                         </div>
                     </div>
@@ -181,15 +181,15 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form method="post" action="<?= site_url('petugas/destroy')?>">
-                            <div class="modal-body">
-                                <h5>Apakah anda yakin ingin menghapus Petugas ini ?</h5>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="hidden" id="mdlHapus_id" name="USERNAME_PETUGAS">
-                                <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-trash mr-1"></i>Hapus Petugas</button>
-                            </div>
+                            <form method="post" action="<?= site_url('petugas/destroy') ?>">
+                                <div class="modal-body">
+                                    <h5>Apakah anda yakin ingin menghapus Petugas ini ?</h5>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="hidden" id="mdlHapus_id" name="USERNAME_PETUGAS">
+                                    <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-trash mr-1"></i>Hapus Petugas</button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -210,13 +210,15 @@
             fixedColumns: false
         });
     });
-    $('#dataTablePetugas tbody').on('click', '.mdlEdit', function(){
+    $('#dataTablePetugas tbody').on('click', '.mdlEdit', function() {
         const id = $(this).data('id')
         $.ajax({
-            url: '<?= site_url('petugas/ajxDetail')?>',
+            url: '<?= site_url('petugas/ajxDetail') ?>',
             method: 'post',
-            data: {USERNAME_PETUGAS: id},
-            success: function(res){
+            data: {
+                USERNAME_PETUGAS: id
+            },
+            success: function(res) {
                 res = JSON.parse(res)
                 $('#mdlEdit_username').val(res.USERNAME_PETUGAS)
                 $('#mdlEdit_email').val(res.EMAIL_PETUGAS)
@@ -225,14 +227,14 @@
                 $('#mdlEdit_alamat').val(res.ALAMAT_PETUGAS)
                 $('#mdlEdit_telp').val(res.TELP_PETUGAS)
                 $('#mdlEdit_id').val(id)
-                if(res.JK_PETUGAS === "1")
+                if (res.JK_PETUGAS === "1")
                     $('#mdlEdit_jk_laki').prop('checked', true)
                 else
                     $('#mdlEdit_jk_perempuan').prop('checked', true)
             }
         })
     })
-    $('#dataTablePetugas tbody').on('click', '.mdlHapus', function(){
+    $('#dataTablePetugas tbody').on('click', '.mdlHapus', function() {
         const id = $(this).data('id')
         $('#mdlHapus_id').val(id)
     })

@@ -60,13 +60,13 @@
                                         <div class="form-group">
                                             <label for="jk">Jenis Kelamin</label>
                                             <br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input ml-4" type="radio" name="inlineRadioOptions" id="laki" value="1">
-                                                <label class="form-check-label" for="laki">Laki-Laki</label>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="laki" name="simpan" class="custom-control-input">
+                                                <label class="custom-control-label" for="laki">Laki-Laki</label>
                                             </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input ml-4" type="radio" name="inlineRadioOptions" id="perempuan" value="2">
-                                                <label class="form-check-label" for="perempuan">Perempuan</label>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="perempuan" name="simpan" class="custom-control-input">
+                                                <label class="custom-control-label" for="perempuan">Perempuan</label>
                                             </div>
                                         </div>
                                         <div class="form-group">

@@ -17,19 +17,13 @@
                     <div class="d-flex align-items-center">
                         <div class="d-flex flex-row">
                             <div id="image_div">
-                                <img class="" src="<?= base_url(); ?>assets/img/circle_info.svg" alt="Responsive image"></img>
-                                <p id="image_label"><span>10</span></p>
+                                <div class="teksgambar">
+                                    <p>10</p>
+                                </div>
                             </div>
-                            <div class="mt-4">
+                            <div class="mt-4 p-3 ">
                                 <div class="text-md font-weight-bold text-black mb-2">Jumlah Anggota</div>
-                                <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2">
-                                    <i class="mr-1" data-feather="trending-up"></i>
-                                    1%
-                                    <img class="img-fluid ml-3" style="width: 40%;" src="<?= base_url(); ?>assets/img/chart.svg" alt="Responsive image"></img>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row ml-4">
-                                <i class="fa fa-ellipsis-h"></i>
+                                <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2"></div>
                             </div>
                         </div>
                     </div>
@@ -37,51 +31,39 @@
             </div>
         </div>
         <div class="col-xl-4 col-md-6 mb-4">
-            <!-- Dashboard info widget 3-->
+            <!-- Dashboard info widget 1-->
             <div class="card border-top-0 border-bottom-0 border-right-0 border-left-lg border-primary h-100">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div class="d-flex flex-row">
                             <div id="image_div">
-                                <img class="" src="<?= base_url(); ?>assets/img/circle_info.svg" alt="Responsive image"></img>
-                                <p id="image_label"><span>10</span></p>
+                                <div class="teksgambar">
+                                    <p>10</p>
+                                </div>
                             </div>
-                            <div class="mt-4">
+                            <div class="mt-4 p-3">
+                                <div class="text-md font-weight-bold text-black mb-2">Jumlah Petugas</div>
+                                <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6 mb-4">
+            <!-- Dashboard info widget 1-->
+            <div class="card border-top-0 border-bottom-0 border-right-0 border-left-lg border-primary h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex flex-row">
+                            <div id="image_div">
+                                <div class="teksgambar">
+                                    <p>10</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3">
                                 <div class="text-md font-weight-bold text-black mb-2">Jumlah Transaksi</div>
-                                <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2">
-                                    <i class="mr-1" data-feather="trending-up"></i>
-                                    1%
-                                    <img class="img-fluid ml-3" style="width: 40%;" src="<?= base_url(); ?>assets/img/chart.svg" alt="Responsive image"></img>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row ml-4">
-                                <i class="fa fa-ellipsis-h"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-4 col-md-6 mb-4">
-            <!-- Dashboard info widget 3-->
-            <div class="card border-top-0 border-bottom-0 border-right-0 border-left-lg border-primary h-100">
-                <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div class="d-flex flex-row">
-                            <div id="image_div">
-                                <img class="" src="<?= base_url(); ?>assets/img/circle_info.svg" alt="Responsive image"></img>
-                                <p id="image_label"><span>10</span></p>
-                            </div>
-                            <div class="mt-4">
-                                <div class="text-md font-weight-bold text-black mb-2">Jumlah Sanksi</div>
-                                <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2">
-                                    <i class="mr-1" data-feather="trending-up"></i>
-                                    1%
-                                    <img class="img-fluid ml-3" style="width: 40%;" src="<?= base_url(); ?>assets/img/chart.svg" alt="Responsive image"></img>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row ml-4">
-                                <i class="fa fa-ellipsis-h"></i>
+                                <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2"></div>
                             </div>
                         </div>
                     </div>
