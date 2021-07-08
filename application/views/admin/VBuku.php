@@ -20,32 +20,30 @@
                                 <tr>
                                     <th>ISBN Buku</th>
                                     <th>Judul Buku</th>
+                                    <th>Kategori Buku</th>
                                     <th>Tahun Terbit</th>
                                     <th>Stok Buku</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>817562562565</td>
-                                    <td>Kambing Jantan</td>
-                                    <td>2018</td>
-                                    <td>52</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-warning ml-1" data-id="" type="button" data-toggle="modal" data-target="#editBuku"><i class="fa fa-edit fa-fw"></i></button>
-                                        <button class="btn btn-sm btn-danger ml-1" data-id="" type="button" data-toggle="modal" data-target="#hapusBuku"><i class="fa fa-trash fa-fw"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>817562562565</td>
-                                    <td>Kambing Jantan</td>
-                                    <td>2018</td>
-                                    <td>52</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-warning ml-1 mt-1" data-id="" type="button" data-toggle="modal" data-target="#editBuku"><i class="fa fa-edit fa-fw"></i></button>
-                                        <button class="btn btn-sm btn-danger ml-1 mt-1" data-id="" type="button" data-toggle="modal" data-target="#hapusBuku"><i class="fa fa-trash fa-fw"></i></button>
-                                    </td>
-                                </tr>
+                                <?php
+                                    foreach ($bukus as $item) {
+                                        echo '
+                                            <tr>
+                                                <td>'.$item->ISBN_BUKU.'</td>
+                                                <td>'.$item->JUDUL_BUKU.'</td>
+                                                <td>'.$item->NAMA_KATEGORI.'</td>
+                                                <td>'.$item->TAHUN_BUKU.'</td>
+                                                <td>'.$item->STOK_BUKU.'</td>
+                                                <td>
+                                                <button class="btn btn-sm btn-warning ml-1 mdlEdit" data-id="'.$item->ID_BUKU.'" type="button" data-toggle="modal" data-target="#editBuku"><i class="fa fa-edit fa-fw"></i></button>
+                                                <button class="btn btn-sm btn-danger ml-1 mdlHapus" data-id="'.$item->ID_BUKU.'" type="button" data-toggle="modal" data-target="#hapusBuku"><i class="fa fa-trash fa-fw"></i></button>
+                                                </td>
+                                            </tr>
+                                        ';
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -60,23 +58,63 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="post" action="<?= site_url('buku/store')?>">
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="isbn">ISBN Buku</label>
-                                    <input type="text" name="" class="form-control" placeholder="Masukkan ISBN" required>
+                                    <input type="text" name="ISBN_BUKU" class="form-control" placeholder="Masukkan ISBN" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="judul">Judul Buku</label>
-                                    <input type="text" name="" class="form-control" placeholder="Masukkan Judul" required>
+                                    <input type="text" name="JUDUL_BUKU" class="form-control" placeholder="Masukkan Judul" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stok">Kategori Buku</label>
+                                    <br>
+                                    <select name="ID_KATEGORI" class="form-control">
+                                        <?php
+                                            foreach ($kategoris as $item) {
+                                                echo '
+                                                    <option value="'.$item->ID_KATEGORI.'">'.$item->NAMA_KATEGORI.'</option>
+                                                ';
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stok">Pengarang</label>
+                                    <br>
+                                    <select name="ID_PENGARANG" class="form-control">
+                                        <?php
+                                            foreach ($pengarangs as $item) {
+                                                echo '
+                                                    <option value="'.$item->ID_PENGARANG.'">'.$item->NAMA_PENGARANG.'</option>
+                                                ';
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stok">Penerbit</label>
+                                    <br>
+                                    <select name="ID_PENERBIT" class="form-control">
+                                        <?php
+                                            foreach ($penerbits as $item) {
+                                                echo '
+                                                    <option value="'.$item->ID_PENERBIT.'">'.$item->NAMA_PENERBIT.'</option>
+                                                ';
+                                            }
+                                        ?>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="tahun">Tahun Terbit</label>
-                                    <input type="number" name="" class="form-control" placeholder="Masukkan Tahun" required></input>
+                                    <input type="date" name="TAHUN_BUKU" class="form-control" placeholder="Masukkan Tahun" required></input>
                                 </div>
                                 <div class="form-group">
                                     <label for="stok">Stok Buku</label>
                                     <br>
-                                    <input type="number" name="" class="form-control" placeholder="Masukkan Stok" required>
+                                    <input type="number" name="STOK_BUKU" class="form-control" placeholder="Masukkan Stok" required>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -98,26 +136,67 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="post" action="<?= site_url('buku/edit')?>">
                             <div class="modal-body">
                             <div class="form-group">
                                     <label for="isbn">ISBN Buku</label>
-                                    <input type="text" name="" class="form-control" placeholder="Masukkan ISBN" required>
+                                    <input type="text" name="ISBN_BUKU" id="mdlEdit_isbn" class="form-control" placeholder="Masukkan ISBN" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="judul">Judul Buku</label>
-                                    <input type="text" name="" class="form-control" placeholder="Masukkan Judul" required>
+                                    <input type="text" name="JUDUL_BUKU" id="mdlEdit_judul" class="form-control" placeholder="Masukkan Judul" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stok">Kategori Buku</label>
+                                    <br>
+                                    <select name="ID_KATEGORI" id="mdlEdit_kategori" class="form-control">
+                                        <?php
+                                            foreach ($kategoris as $item) {
+                                                echo '
+                                                    <option value="'.$item->ID_KATEGORI.'">'.$item->NAMA_KATEGORI.'</option>
+                                                ';
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stok">Pengarang</label>
+                                    <br>
+                                    <select name="ID_PENGARANG" id="mdlEdit_pengarang" class="form-control">
+                                        <?php
+                                            foreach ($pengarangs as $item) {
+                                                echo '
+                                                    <option value="'.$item->ID_PENGARANG.'">'.$item->NAMA_PENGARANG.'</option>
+                                                ';
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stok">Penerbit</label>
+                                    <br>
+                                    <select name="ID_PENERBIT" id="mdlEdit_penerbit" class="form-control">
+                                        <?php
+                                            foreach ($penerbits as $item) {
+                                                echo '
+                                                    <option value="'.$item->ID_PENERBIT.'">'.$item->NAMA_PENERBIT.'</option>
+                                                ';
+                                            }
+                                        ?>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="tahun">Tahun Terbit</label>
-                                    <input type="number" name="" class="form-control" placeholder="Masukkan Tahun" required></input>
+                                    <input type="date" name="TAHUN_BUKU" id="mdlEdit_tahun" class="form-control" placeholder="Masukkan Tahun" required></input>
                                 </div>
                                 <div class="form-group">
                                     <label for="stok">Stok Buku</label>
                                     <br>
-                                    <input type="number" name="" class="form-control" placeholder="Masukkan Stok" required>
+                                    <input type="number" name="STOK_BUKU" id="mdlEdit_stok" class="form-control" placeholder="Masukkan Stok" required>
                                 </div>
                             </div>
                             <div class="modal-footer">
+                                <input name="ID_BUKU" id="mdlEdit_id" type="hidden">
                                 <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-check mr-1"></i>Simpan</button>
                             </div>
@@ -135,11 +214,12 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="post" action="<?= site_url('buku/destroy')?>">
                             <div class="modal-body">
                                 <h5>Apakah anda yakin ingin menghapus Buku ini ?</h5>
                             </div>
                             <div class="modal-footer">
-                                <input type="hidden" id="" name="">
+                                <input type="hidden" id="mdlHapus_id" name="ID_BUKU">
                                 <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-trash mr-1"></i>Hapus Buku</button>
                             </div>
@@ -163,4 +243,27 @@
             fixedColumns: false
         });
     });
+    $('#dataTableBuku tbody').on('click', '.mdlEdit', function(){
+        const id = $(this).data('id')
+        $.ajax({
+            url: '<?= site_url('buku/ajxDetail')?>',
+            method: 'post',
+            data: {ID_BUKU: id},
+            success: function(res){
+                res = JSON.parse(res)
+                $('#mdlEdit_isbn').val(res.ISBN_BUKU)
+                $('#mdlEdit_judul').val(res.JUDUL_BUKU)
+                $('#mdlEdit_kategori').val(res.ID_KATEGORI).change()
+                $('#mdlEdit_pengarang').val(res.ID_PENGARANG).change()
+                $('#mdlEdit_penerbit').val(res.ID_PENERBIT).change()
+                $('#mdlEdit_tahun').val(res.TAHUN_BUKU)
+                $('#mdlEdit_stok').val(res.STOK_BUKU)
+                $('#mdlEdit_id').val(id)
+            }
+        })
+    })
+    $('#dataTableBuku tbody').on('click', '.mdlHapus', function(){
+        const id = $(this).data('id')
+        $('#mdlHapus_id').val(id)
+    })
 </script>

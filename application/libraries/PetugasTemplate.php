@@ -1,5 +1,5 @@
 <?php
-class Petugas
+class PetugasTemplate
 {
     protected $_ci;
 

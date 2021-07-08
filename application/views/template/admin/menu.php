@@ -1,13 +1,13 @@
 <div class="nav accordion" id="accordionSidenav">
-    <a class="nav-link " href="<?php echo site_url('admin/OverviewController/vOverview'); ?>">
+    <a class="nav-link " href="<?php echo site_url('admin-overview'); ?>">
         <i class="fas fa-eye ml-2 mr-3 fa-lg fa-fw"></i>
         Overview
     </a>
-    <a class="nav-link " href="<?php echo site_url('admin/AnggotaController/vAnggota'); ?>">
+    <a class="nav-link " href="<?php echo site_url('anggota'); ?>">
         <i class="fas fa-users ml-2 mr-3 fa-lg fa-fw"></i>
         Anggota
     </a>
-    <a class="nav-link" href="<?php echo site_url('admin/BukuController/vBuku'); ?>">
+    <a class="nav-link" href="<?php echo site_url('buku'); ?>">
         <i class="fas fa-book ml-2 mr-3 fa-lg  fa-fw"></i>
         Buku
     </a>
@@ -23,7 +23,7 @@
         <i class="fa fa-list-alt ml-2 mr-3 fa-lg fa-fw"></i>
         Kategori
     </a>
-    <a class="nav-link" href="<?php echo site_url('admin/PetugasController/vPetugas'); ?>">
+    <a class="nav-link" href="<?php echo site_url('petugas'); ?>">
         <i class="fa fa-user-shield ml-2 mr-3 fa-lg fa-fw"></i>
         Petugas
     </a>

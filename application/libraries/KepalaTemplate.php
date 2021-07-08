@@ -1,5 +1,5 @@
 <?php
-class Anggota
+class KepalaTemplate
 {
     protected $_ci;
 
@@ -8,9 +8,9 @@ class Anggota
     }
     
     function view($content, $data = null){
-        $this->_ci->load->view('template/anggota/header', $data); // Header
+        $this->_ci->load->view('template/kepalaperpus/header', $data); // Header
         $this->_ci->load->view($content, $data); // Content
-        $this->_ci->load->view('template/anggota/footer', $data); // Footer
+        $this->_ci->load->view('template/kepalaperpus/footer', $data); // Footer
     }
 }
 ?>
