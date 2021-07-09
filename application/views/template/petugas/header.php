@@ -48,21 +48,6 @@
                     </h6>
                 </div>
             </li>
-            <li class="nav-item dropdown no-caret mr-5 dropdown-notifications list-pemberitahuan">
-                <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownMessages" href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-bell"></i>&nbsp;
-                    <span class="badge badge-danger bg-danger"></span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownAlerts">
-                    <h6 class="dropdown-header dropdown-notifications-header">
-                        <i class="mr-2" data-feather="bell"></i>
-                        Pemberitahuan
-                    </h6>
-                    <a class="dropdown-item dropdown-notifications-item notifikasi">
-                        Tidak Ada Pemberitahuan
-                    </a>
-                </div>
-            </li>
         </ul>
     </nav>
     <!--Modal Konfirmasi-->

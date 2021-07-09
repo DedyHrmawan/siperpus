@@ -24,12 +24,6 @@ class Welcome extends CI_Controller {
 	}
 
 	//Controller Kepalaperpus
-	public function vOverviewKepala()
-    {
-        $data['title']          = 'Overview Kepala | e-Libs';
-
-        $this->kepalatemplate->view('kepalaperpus/VOverviewKepala', $data);
-    }
 
 	public function vTransaksi()
     {
@@ -88,33 +82,54 @@ class Welcome extends CI_Controller {
         $this->petugastemplate->view('petugas/VOverviewPetugas', $data);
     }
 
-    public function vTransaksiPetugas()
+    public function vPeminjamanPetugas()
     {
-        $data['title']          = 'Transaksi | e-Libs';
+        $data['title']          = 'Peminjaman | e-Libs';
 
-        $this->petugastemplate->view('petugas/VTransaksiPetugas', $data);
+        $this->petugastemplate->view('petugas/VPeminjamanPetugas', $data);
     }
 
-    public function vSanksi()
+    public function vPengembalianPetugas()
+    {
+        $data['title']          = 'Pengembalian | e-Libs';
+
+        $this->petugastemplate->view('petugas/VPengembalianPetugas', $data);
+    }
+
+    public function vSanksiPetugas()
     {
         $data['title']          = 'Sanksi | e-Libs';
 
-        $this->petugastemplate->view('petugas/VSanksi', $data);
+        $this->petugastemplate->view('petugas/VSanksiPetugas', $data);
     }
 
     // Controller Anggota
-    public function vBuku()
+    public function vBukuAnggota()
     {
         $data['title']          = 'Daftar Buku | e-Libs';
 
         $this->anggotatemplate->view('anggota/VBuku', $data);
     }   
 
-    public function vTransaksiAnggota()
+    public function vPeminjamanAnggota()
     {
-        $data['title']          = 'Transaksi | e-Libs';
+        $data['title']          = 'Peminjaman Anggota | e-Libs';
 
-        $this->anggotatemplate->view('anggota/VTransaksi', $data);
+        $this->anggotatemplate->view('anggota/VPeminjamanAnggota', $data);
+    }   
+
+    public function vPengembalianAnggota()
+    {
+        $data['title']          = 'Pengembalian Anggota | e-Libs';
+
+        $this->anggotatemplate->view('anggota/VPengembalianAnggota', $data);
+    }   
+
+    public function vSanksiAnggota()
+    {
+        $data['title']          = 'Sanksi Anggota | e-Libs';
+
+        $this->anggotatemplate->view('anggota/VSanksiAnggota', $data);
     }   
 
     public function vKeranjang(){

@@ -3,11 +3,15 @@
         <i class="fas fa-eye ml-2 mr-3 fa-lg fa-fw"></i>
         Overview
     </a>
-    <a class="nav-link" href="<?php echo site_url('Welcome/vTransaksiPetugas'); ?>">
-        <i class="fas fa-exchange-alt ml-2 mr-3 fa-lg  fa-fw"></i>
-        Transaksi
+    <a class="nav-link" href="<?php echo site_url('Welcome/vPeminjamanPetugas'); ?>">
+        <i class="fas fa-long-arrow-alt-right ml-2 mr-3 fa-lg  fa-fw"></i>
+        Peminjaman
     </a>
-    <a class="nav-link" href="<?php echo site_url('Welcome/vSanksi'); ?>">
+    <a class="nav-link" href="<?php echo site_url('Welcome/vPengembalianPetugas'); ?>">
+        <i class="fas fa-long-arrow-alt-left ml-2 mr-3 fa-lg  fa-fw"></i>
+        Pengembalian
+    </a>
+    <a class="nav-link" href="<?php echo site_url('Welcome/vSanksiPetugas'); ?>">
         <i class="fa fa-user-injured ml-2 mr-3 fa-lg fa-fw"></i>
         Sanksi
     </a>

@@ -57,7 +57,7 @@
                         <div class="d-flex flex-row">
                             <div id="image_div">
                                 <div class="teksgambar">
-                                    <p>10</p>
+                                    <p>100</p>
                                 </div>
                             </div>
                             <div class="mt-4 p-3">
