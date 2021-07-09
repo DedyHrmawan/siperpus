@@ -46,14 +46,14 @@
 <body class="nav-fixed">
     <nav class="topnav navbar navbar-expand shadow navbar-light bg-content" id="sidenavAccordion">
         <img style="width:3%" class="navbar-brand-img ml-3" src="<?= base_url(); ?>assets/img/ic_logoelibs.svg"></img>
-        <a class="navbar-brand ml-3" href="<?php echo site_url('Welcome/vBuku'); ?>">Perpustakaan Online</a>
+        <a class="navbar-brand ml-3" href="<?php echo site_url('Welcome/vBukuAnggota'); ?>">Perpustakaan Online</a>
 
-        <div class="input-group border rounded-pill p-0 col-md-6 border-primary">
+        <!-- <div class="input-group border rounded-pill p-0 col-md-6 border-primary">
             <div class="input-group-prepend border-0">
                 <button id="button-addon4" type="button" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
             </div>
             <input type="search" placeholder="Cari Buku" aria-describedby="button-addon4" class="form-control bg-none border-0 rounded-pill p-1">
-        </div>
+        </div> -->
 
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-caret mr-5">
@@ -94,22 +94,6 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
-            </li>
-
-            <li class="nav-item dropdown no-caret mr-5 dropdown-notifications">
-                <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownMessages" href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-bell"></i>&nbsp;
-                    <span class="badge badge-danger bg-danger"></span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownAlerts">
-                    <h6 class="dropdown-header dropdown-notifications-header">
-                        <i class="mr-2" data-feather="bell"></i>
-                        Pemberitahuan
-                    </h6>
-                    <a class="dropdown-item dropdown-notifications-item notifikasi">
-                        Tidak Ada Pemberitahuan
                     </a>
                 </div>
             </li>
