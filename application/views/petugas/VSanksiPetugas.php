@@ -19,23 +19,15 @@
                         <table class="table table-bordered table-hover" id="dataTablePembayaran" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>ID Sanksi</th>
-                                    <th>Username Anggota</th>
-                                    <th>Judul Buku</th>
+                                    <th>ID Peminjaman</th>
                                     <th>Total Sanksi</th>
-                                    <th>Status Pembayaran</th>
                                     <th width="12%">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>29840981</td>
-                                    <td>Gordon Ramzi</td>
-                                    <td>Kambing Jantan</td>
                                     <td>Rp. 10000</td>
-                                    <td class="text-center">
-                                        <div class="badge badge-success badge-pill">Sudah Bayar</div>
-                                    </td>
                                     <td>
                                         <button class="btn btn-sm btn-warning m-1" data-id="" type="button" data-toggle="modal" data-target="#editSanksi"><i class="fa fa-edit fa-fw"></i></button>
                                         <button class="btn btn-sm btn-danger m-1" data-id="" type="button" data-toggle="modal" data-target="#hapusPembayaran"><i class="fa fa-trash fa-fw"></i></button>
@@ -57,7 +49,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="anggota">Username Anggota</label>
+                                    <label for="anggota">ID Peminjaman</label>
                                     <br>
                                     <select name="" class="form-control select-modal-width">
                                         <option value="1">DEDY</option>
@@ -65,16 +57,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="judul">Judul Buku</label>
-                                    <br>
-                                    <select name="" class="form-control js-example-basic-multiple select-modal-width" multiple="multiple">
-                                        <option value="1">Kambing Betina</option>
-                                        <option value="2">Sapi Jantan</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
                                     <label for="total">Total Sanksi</label>
-                                    <input type="text" name="" class="form-control" placeholder="Tanggal Sanksi" id="tglPinjam" required>
+                                    <input type="number" name="" class="form-control" placeholder="Total Sanksi" id="tglPinjam" required>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -97,7 +81,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="anggota">Username Anggota</label>
+                                    <label for="anggota">ID Peminjaman</label>
                                     <br>
                                     <select name="" class="form-control select-modal-width">
                                         <option value="1">DEDY</option>
@@ -105,24 +89,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="judul">Judul Buku</label>
-                                    <br>
-                                    <select name="" class="form-control js-example-basic-multiple select-modal-width" multiple="multiple">
-                                        <option value="1">Kambing Betina</option>
-                                        <option value="2">Sapi Jantan</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
                                     <label for="total">Total Sanksi</label>
-                                    <input type="text" name="" class="form-control" placeholder="Tanggal Sanksi" id="tglPinjam" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="status">Status</label>
-                                    <br>
-                                    <select class="form-control select-modal-width">
-                                        <option value="0">Belum Bayar</option>
-                                        <option value="1">Sudah Bayar</option>
-                                    </select>
+                                    <input type="number" name="" class="form-control" required>
                                 </div>
                             </div>
                             <div class="modal-footer">

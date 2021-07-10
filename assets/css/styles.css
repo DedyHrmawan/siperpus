@@ -20705,6 +20705,11 @@ input:disabled{
   padding: 10px 10px;
 }
 
+.select-modal-width2 {
+  width: 32rem !important;
+  padding: 5px 5px;
+}
+
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
   top: 100% !important;
 }
