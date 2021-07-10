@@ -21,6 +21,8 @@
                                 <tr>
                                     <th>ID Peminjaman</th>
                                     <th>Total Sanksi</th>
+                                    <th>Tanggal Pembayaran</th>
+                                    <th>Status Pembayaran</th>
                                     <th width="12%">Aksi</th>
                                 </tr>
                             </thead>
@@ -28,6 +30,10 @@
                                 <tr>
                                     <td>29840981</td>
                                     <td>Rp. 10000</td>
+                                    <td>12/08/2019</td>
+                                    <td class="text-center">
+                                        <div class="badge badge-success badge-pill">Sudah Bayar</div>
+                                    </td>
                                     <td>
                                         <button class="btn btn-sm btn-warning m-1" data-id="" type="button" data-toggle="modal" data-target="#editSanksi"><i class="fa fa-edit fa-fw"></i></button>
                                         <button class="btn btn-sm btn-danger m-1" data-id="" type="button" data-toggle="modal" data-target="#hapusPembayaran"><i class="fa fa-trash fa-fw"></i></button>
@@ -49,7 +55,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="anggota">ID Peminjaman</label>
+                                    <label for="id">ID Peminjaman</label>
                                     <br>
                                     <select name="" class="form-control select-modal-width">
                                         <option value="1">DEDY</option>
@@ -58,7 +64,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="total">Total Sanksi</label>
-                                    <input type="number" name="" class="form-control" placeholder="Total Sanksi" id="tglPinjam" required>
+                                    <input type="text" name="" class="form-control" placeholder="Total Sanksi" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tglKembali">Tanggal Pembayaran</label>
+                                    <input type="text" name="" class="form-control" placeholder="Tanggal Pembayaran" id="tglBayar" required>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -81,7 +91,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="anggota">ID Peminjaman</label>
+                                    <label for="anggota">Username Anggota</label>
                                     <br>
                                     <select name="" class="form-control select-modal-width">
                                         <option value="1">DEDY</option>
@@ -89,8 +99,28 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
+                                    <label for="judul">Judul Buku</label>
+                                    <br>
+                                    <select name="" class="form-control js-example-basic-multiple select-modal-width" multiple="multiple">
+                                        <option value="1">Kambing Betina</option>
+                                        <option value="2">Sapi Jantan</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <label for="total">Total Sanksi</label>
-                                    <input type="number" name="" class="form-control" required>
+                                    <input type="text" name="" class="form-control" placeholder="Tanggal Sanksi" id="tglPinjam" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="edittglBayar">Tanggal Pembayaran</label>
+                                    <input type="text" name="" class="form-control" id="editTglBayar" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status">Status</label>
+                                    <br>
+                                    <select class="form-control select-modal-width">
+                                        <option value="0">Belum Bayar</option>
+                                        <option value="1">Sudah Bayar</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -139,5 +169,19 @@
             ],
             fixedColumns: false
         });
+    });
+  
+    //dp tgl Bayar
+    $('#tglBayar').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        todayHighlight: true,
+    });
+
+     //dp edit tgl Bayar
+     $('#editTglBayar').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        todayHighlight: true,
     });
 </script>

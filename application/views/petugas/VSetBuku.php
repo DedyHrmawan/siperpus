@@ -27,7 +27,6 @@
                                     <th width="57%">Buku</th>
                                     <th width="15%">Stok Buku</th>
                                     <th width="20%">Jumlah Buku</th>
-                                    <th width=8%>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -36,14 +35,11 @@
                                         <td>
                                             Kambing Jantan
                                         </td>
-                                        <td>
+                                        <td class="text-center">
                                             <div class="badge badge-success badge-pill">14</div>
                                         </td>
                                         <td>
                                             <input name="" class="form-control" type="number" placeholder="Jumlah Buku" />
-                                        <td>
-                                            <button type="button" id="deleteRow" class="btn btn-danger btn-sm deleterow"><i class="fa fa-trash"></i></button>
-                                        </td>
                                     </tr>
                                 </div>
                             </tbody>
