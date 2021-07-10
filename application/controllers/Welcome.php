@@ -89,6 +89,27 @@ class Welcome extends CI_Controller {
         $this->petugastemplate->view('petugas/VPeminjamanPetugas', $data);
     }
 
+    public function vTambahPeminjaman()
+    {
+        $data['title']          = 'Tambah Peminjaman Buku | e-Libs';
+
+        $this->petugastemplate->view('petugas/VTambahPeminjaman', $data);
+    }
+
+    public function vEditPeminjaman()
+    {
+        $data['title']          = 'Edit Peminjaman Buku | e-Libs';
+
+        $this->petugastemplate->view('petugas/VEditPeminjaman', $data);
+    }
+
+    public function vSetBuku()
+    {
+        $data['title']          = 'Jumlah Buku | e-Libs';
+
+        $this->petugastemplate->view('petugas/VSetBuku', $data);
+    }
+
     public function vPengembalianPetugas()
     {
         $data['title']          = 'Pengembalian | e-Libs';

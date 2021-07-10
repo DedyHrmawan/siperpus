@@ -19,13 +19,11 @@
                         <table class="table table-bordered table-hover" id="dataTablePengembalian" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>ID Pengembalian</th>
+                                    <th>ID Peminjaman</th>
                                     <th>Username Anggota</th>
-                                    <th>Petugas</th>
                                     <th>Judul Buku</th>
                                     <th>Tanggal Pinjam</th>
                                     <th>Tanggal Kembali</th>
-                                    <th>Status</th>
                                     <th width="12%">Aksi</th>
                                 </tr>
                             </thead>
@@ -33,13 +31,9 @@
                                 <tr>
                                     <td>29840981</td>
                                     <td>gordonramzi</td>
-                                    <td>Supardi </td>
                                     <td>Kambing Betina</td>
                                     <td>12/08/2019</td>
                                     <td>12/08/2020</td>
-                                    <td class="text-center">
-                                        <div class="badge badge-success badge-pill">Kembali</div>
-                                    </td>
                                     <td>
                                         <button class="btn btn-sm btn-warning m-1" data-id="" type="button" data-toggle="modal" data-target="#editPengembalian"><i class="fa fa-edit fa-fw"></i></button>
                                         <button class="btn btn-sm btn-danger m-1" data-id="" type="button" data-toggle="modal" data-target="#hapusPengembalian"><i class="fa fa-trash fa-fw"></i></button>
@@ -61,32 +55,12 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="anggota">Username Anggota</label>
+                                    <label for="id">ID Peminjaman</label>
                                     <br>
                                     <select name="" class="form-control select-modal-width">
                                         <option value="1">DEDY</option>
                                         <option value="2">LALALALA</option>
                                     </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="petugas">Username Petugas</label>
-                                    <br>
-                                    <select name="" class="form-control select-modal-width">
-                                        <option value="1">DEDY</option>
-                                        <option value="2">LALALALA</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="judul">Judul Buku</label>
-                                    <br>
-                                    <select name="" class="form-control js-example-basic-multiple select-modal-width" multiple="multiple">
-                                        <option value="1">Kambing Betina</option>
-                                        <option value="2">Sapi Jantan</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="tglPinjam">Tanggal Pengembalian</label>
-                                    <input type="text" name="" class="form-control" placeholder="Tanggal Pengembalian" id="tglPinjam" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="tglKembali">Tanggal Pengembalian</label>
@@ -114,44 +88,16 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="anggota">Username Anggota</label>
+                                    <label for="id">ID Peminjaman</label>
                                     <br>
                                     <select name="" class="form-control select-modal-width">
                                         <option value="1">DEDY</option>
                                         <option value="2">LALALALA</option>
                                     </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="petugas">Username Petugas</label>
-                                    <br>
-                                    <select name="" class="form-control select-modal-width">
-                                        <option value="1">DEDY</option>
-                                        <option value="2">LALALALA</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="judul">Judul Buku</label>
-                                    <br>
-                                    <select name="" class="form-control js-example-basic-multiple select-modal-width" multiple="multiple">
-                                        <option value="1">Kambing Betina</option>
-                                        <option value="2">Sapi Jantan</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="editTglPinjam">Tanggal Pengembalian</label>
-                                    <input type="text" name="" class="form-control" id="editTglPinjam">
                                 </div>
                                 <div class="form-group">
                                     <label for="editTglKembali">Tanggal Pengembalian</label>
                                     <input type="text" name="" class="form-control" id="editTglKembali">
-                                </div>
-                                <div class="form-group">
-                                    <label for="status">Status</label>
-                                    <br>
-                                    <select class="form-control select-modal-width">
-                                        <option value="0">Pinjam</option>
-                                        <option value="1">Selesai</option>
-                                    </select>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -203,22 +149,8 @@
     });
 </script>
 <script type="text/javascript">
-    //datepicker tambah Pengembalian
-    $('#tglPinjam').datepicker({
-        format: 'yyyy-mm-dd',
-        autoclose: true,
-        todayHighlight: true,
-    });
-
-    //datepicker taambah Pengembalian
-    $('#tglKembali').datepicker({
-        format: 'yyyy-mm-dd',
-        autoclose: true,
-        todayHighlight: true,
-    });
-    
     //dp edit Pengembalian
-    $('#editTglPinjam').datepicker({
+    $('#tglKembali').datepicker({
         format: 'yyyy-mm-dd',
         autoclose: true,
         todayHighlight: true,
