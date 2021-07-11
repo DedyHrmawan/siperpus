@@ -25,7 +25,7 @@
                     <div class="nav-link text-lg text-black mt-auto mr-15 ">Perpustakaan Online</div>
                 </ul>
             </div>
-            <a class="btn btn-sm btn-primary-soft mr-2 my-1 font-weight-bold" href="<?php echo site_url('LoginController'); ?>" type="button">Login</a>
+            <a class="btn btn-sm btn-primary-soft mr-2 my-1 font-weight-bold" href="<?php echo site_url('AuthController'); ?>" type="button">Login</a>
             <a class="btn btn-sm btn-primary mr-2 my-1 font-weight-bold" href="<?php echo site_url('DaftarController'); ?>" type="button">Sign Up</a>
         </div>
     </header>
@@ -48,36 +48,6 @@
             </div>
         </div>
     </section>
-
-    <footer class="navbar navbar-expand-xl navbar-nav fixed-bottom bg-primary" id="mainNav">
-        <div class="container">
-            <div>
-                <h3 class="text-md text-white font-weight-bold mt-auto">Company</h3>
-                <a class="nav-link text-md text-white mt-auto" href="">About Us</a>
-                <a class="nav-link text-md text-white mt-auto" href="">Contact Us</a>
-            </div>
-            <div>
-                <h3 class="text-md text-white font-weight-bold mt-auto">Support</h3>
-                <a class="nav-link text-md text-white mt-auto" href="">Help Center</a>
-                <a class="nav-link text-md text-white mt-auto" href="">Comunity Guidelines</a>
-            </div>
-            <div>
-                <h3 class=" text-white font-weight-bold mt-auto">Legal</h3>
-                <a class="nav-link text-white mt-auto" href="">Privacy Policy</a>
-                <a class="nav-link text-md text-white mt-auto " href="">Terms of Services</a>
-            </div>
-            <div>
-                <h3 class="text-md text-white mt-auto">Please Join Now !</h3>
-                <img class="img-fluid ml-4" style="width: 40%;" src="<?= base_url(); ?>assets/img/ic_logoelibs.svg" alt="Responsive image" />
-                <div class="">
-                    <a class="btn btn-social" href="" target="_blank"><i class="fab fa-instagram" style="color:white"></i></a>
-                    <a class="btn btn-social" href="" target="_blank"><i class="fab fa-facebook-f" style="color:white"></i></a>
-                    <a class="btn btn-social" href="" target="_blank"><i class="fab fa-whatsapp" style="color:white"></i></a>
-                    <a class="btn btn-social" href="" target="_blank"><i class="fas fa-envelope" style="color:white"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
 
 </html>
