@@ -52,7 +52,7 @@
                                     </div>
                                     <!-- Form Group (login box)-->
                                     <div class="form-group d-flex align-items-center justify-content-center mt-4 mb-0">
-                                        <button class="btn btn-primary" type="submit">Login</button>
+                                        <button class="btn btn-primary" type="submit">Masuk</button>
                                     </div>
                                     </form>
                                 </div>
