@@ -27,18 +27,25 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>29840981</td>
-                                    <td>Rp. 10000</td>
-                                    <td>12/08/2019</td>
-                                    <td class="text-center">
-                                        <div class="badge badge-success badge-pill">Sudah Bayar</div>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-sm btn-warning m-1" data-id="" type="button" data-toggle="modal" data-target="#editSanksi"><i class="fa fa-edit fa-fw"></i></button>
-                                        <button class="btn btn-sm btn-danger m-1" data-id="" type="button" data-toggle="modal" data-target="#hapusPembayaran"><i class="fa fa-trash fa-fw"></i></button>
-                                    </td>
-                                </tr>
+                                <?php
+                                    foreach ($sanksis as $item) {
+                                        $tglSanksi = date_create($item->TGL_SANKSI);
+                                        echo '
+                                            <tr>
+                                                <td>'.$item->ID_PEMINJAMAN.'</td>
+                                                <td>Rp. '.$item->TOTAL_SANKSI.'</td>
+                                                <td>'.($item->TGL_SANKSI != '0000-00-00' ? date_format($tglSanksi, 'd F Y') : '0000-00-00').'</td>
+                                                <td class="text-center">
+                                                    '.($item->TGL_SANKSI != '0000-00-00' ? '<div class="badge badge-success badge-pill">Sudah Bayar</div>' : '<div class="badge badge-danger badge-pill">Belum Bayar</div>').'
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-warning m-1 mdlEdit" data-id="'.$item->ID_SANKSI.'" type="button" data-toggle="modal" data-target="#editSanksi"><i class="fa fa-edit fa-fw"></i></button>
+                                                    <button class="btn btn-sm btn-danger m-1 mdlHapus" data-id="'.$item->ID_SANKSI.'" type="button" data-toggle="modal" data-target="#hapusPembayaran"><i class="fa fa-trash fa-fw"></i></button>
+                                                </td>
+                                            </tr>
+                                        ';
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -53,22 +60,28 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="post" action="<?= site_url('sanksi/store')?>">
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="id">ID Peminjaman</label>
                                     <br>
-                                    <select name="" class="form-control select-modal-width">
-                                        <option value="1">DEDY</option>
-                                        <option value="2">LALALALA</option>
+                                    <select name="ID_PEMINJAMAN" class="form-control select-modal-width">
+                                        <?php
+                                            foreach ($peminjamans as $item) {
+                                                echo '
+                                                    <option value="'.$item->ID_PEMINJAMAN.'">'.$item->ID_PEMINJAMAN.'</option>
+                                                ';
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="total">Total Sanksi</label>
-                                    <input type="text" name="" class="form-control" placeholder="Total Sanksi" required>
+                                    <label for="">Total Sanksi</label>
+                                    <input type="text" name="TOTAL_SANKSI" class="form-control" placeholder="Total Sanksi" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="tglKembali">Tanggal Pembayaran</label>
-                                    <input type="text" name="" class="form-control" placeholder="Tanggal Pembayaran" id="tglBayar" required>
+                                    <input type="text" name="TGL_SANKSI" class="form-control" placeholder="Tanggal Pembayaran" id="tglBayar">
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -89,41 +102,24 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="post" action="<?= site_url('sanksi/edit')?>">
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="anggota">Username Anggota</label>
+                                    <label for="id">ID Peminjaman</label>
                                     <br>
-                                    <select name="" class="form-control select-modal-width">
-                                        <option value="1">DEDY</option>
-                                        <option value="2">LALALALA</option>
-                                    </select>
+                                    <input type="text" id="mdlEdit_idPeminjaman" class="form-control" disabled />
                                 </div>
                                 <div class="form-group">
-                                    <label for="judul">Judul Buku</label>
-                                    <br>
-                                    <select name="" class="form-control js-example-basic-multiple select-modal-width" multiple="multiple">
-                                        <option value="1">Kambing Betina</option>
-                                        <option value="2">Sapi Jantan</option>
-                                    </select>
+                                    <label for="">Total Sanksi</label>
+                                    <input type="text" name="TOTAL_SANKSI" id="mdlEdit_total" class="form-control" placeholder="Total Sanksi" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="total">Total Sanksi</label>
-                                    <input type="text" name="" class="form-control" placeholder="Tanggal Sanksi" id="tglPinjam" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="edittglBayar">Tanggal Pembayaran</label>
-                                    <input type="text" name="" class="form-control" id="editTglBayar" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="status">Status</label>
-                                    <br>
-                                    <select class="form-control select-modal-width">
-                                        <option value="0">Belum Bayar</option>
-                                        <option value="1">Sudah Bayar</option>
-                                    </select>
+                                    <label for="tglKembali">Tanggal Pembayaran</label>
+                                    <input type="text" name="TGL_SANKSI" class="form-control" placeholder="Tanggal Pembayaran" id="editTglBayar">
                                 </div>
                             </div>
                             <div class="modal-footer">
+                                <input type="hidden" id="mdlEdit_id" name="ID_SANKSI" />
                                 <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-check mr-1"></i>Simpan</button>
                             </div>
@@ -145,8 +141,9 @@
                             <div class="modal-body">
                                 <h5>Apakah anda yakin ingin menghapus Pembayaran ini ?</h5>
                             </div>
+                            <form method="post" action="sanksi/destroy">
                             <div class="modal-footer">
-                                <input type="hidden" id="" name="">
+                                <input type="hidden" id="mdlHapus_id" name="ID_SANKSI">
                                 <button type="button" class="btn btn-primary-soft" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Batal</button>
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-trash mr-1"></i>Hapus Pembayaran</button>
                             </div>
@@ -184,4 +181,23 @@
         autoclose: true,
         todayHighlight: true,
     });
+    $('#dataTablePembayaran tbody').on('click', '.mdlEdit', function(){
+        const id = $(this).data('id')
+        $.ajax({
+            url: '<?= site_url('sanksi/ajxDetail')?>',
+            method: 'post',
+            data: {ID_SANKSI: id},
+            success: function(res){
+                res = JSON.parse(res)
+                $('#mdlEdit_idPeminjaman').val(res.ID_PEMINJAMAN)
+                $('#mdlEdit_total').val(res.TOTAL_SANKSI)
+                $('#editTglBayar').val(res.TGL_SANKSI)
+                $('#mdlEdit_id').val(id)
+            }
+        })
+    })
+    $('#dataTablePembayaran tbody').on('click', '.mdlHapus', function(){
+        const id = $(this).data('id')
+        $('#mdlHapus_id').val(id)
+    })
 </script>

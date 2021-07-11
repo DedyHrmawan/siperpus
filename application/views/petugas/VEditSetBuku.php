@@ -20,7 +20,7 @@
         <div class="col-xl-12 mb-4">
             <div class="card card-header-actions h-100">
                 <div class="card-body">
-                    <form method="post" id="formData" action="<?= site_url('peminjaman/store')?>">
+                    <form method="post" id="formData" action="<?= site_url('peminjaman/update')?>">
                     <div class="datatable">
                         <table class="table table-bordered table-hover" id="datatableJumlahBuku" width="100%" cellspacing="0">
                             <thead>
@@ -38,6 +38,13 @@
                                     <?php
                                         $x = 0;
                                         foreach ($bukus as $item) {
+                                            $jml = '';
+                                            foreach ($peminjamanDetails as $item2) {
+                                                if($item->ID_BUKU == $item2->ID_BUKU){
+                                                    $jml = $item2->JML_PEMINJAMAN;
+                                                    break;
+                                                }
+                                            }
                                             echo '
                                                 <tr>
                                                     <td>
@@ -48,7 +55,7 @@
                                                     </td>
                                                     <td>
                                                         <div class="form-group">
-                                                            <input type="number" name="JML[]" class="form-control"  placeholder="Jumlah Buku" required>
+                                                            <input type="number" name="JML[]" class="form-control"  placeholder="Jumlah Buku" value="'.$jml.'" required>
                                                             <input type="hidden" name="ID_BUKU[]" value="'.$item->ID_BUKU.'">
                                                         </div
                                                     </td>

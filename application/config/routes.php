@@ -97,3 +97,27 @@ $route['buku/destroy']     = 'admin/BukuController/destroy';
 
 //Overview
 $route['admin-overview']     = 'admin/AdminOverviewController/vOverview';
+
+// peminjaman
+$route['peminjaman']                    = 'petugas/PeminjamanController/vPeminjaman';
+$route['peminjaman/tambah']             = 'petugas/PeminjamanController/vTambah';
+$route['peminjaman/tambah-detail']      = 'petugas/PeminjamanController/vTambahDetail';
+$route['peminjaman/ubah/(:any)']        = 'petugas/PeminjamanController/vUbah/$1';
+$route['peminjaman/ubah-detail']        = 'petugas/PeminjamanController/vUbahDetail';
+$route['peminjaman/store']              = 'petugas/PeminjamanController/store';
+$route['peminjaman/edit']               = 'petugas/PeminjamanController/edit';
+$route['peminjaman/destroy']            = 'petugas/PeminjamanController/destroy';
+
+// pengembalian
+$route['pengembalian']             = 'petugas/PengembalianController/vPengembalian';
+$route['pengembalian/store']       = 'petugas/PengembalianController/store';
+$route['pengembalian/ajxDetail']   = 'petugas/PengembalianController/ajxDetail';
+$route['pengembalian/edit']        = 'petugas/PengembalianController/edit';
+$route['pengembalian/destroy']     = 'petugas/PengembalianController/destroy';
+
+// pengembalian
+$route['sanksi']             = 'petugas/SanksiController/vSanksi';
+$route['sanksi/store']       = 'petugas/SanksiController/store';
+$route['sanksi/ajxDetail']   = 'petugas/SanksiController/ajxDetail';
+$route['sanksi/edit']        = 'petugas/SanksiController/edit';
+$route['sanksi/destroy']     = 'petugas/SanksiController/destroy';

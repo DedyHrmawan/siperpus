@@ -13,10 +13,18 @@
                     <div class="sbp-preview">
                         <div class="sbp-preview-content">
                             <div class="col">
+                                <form method="post" action="<?= site_url('peminjaman/ubah-detail')?>">
                                 <div class="form-group">
                                     <label for="anggota">Username Anggota</label>
                                     <br>
-                                    <select name="" class="form-control select-modal-width2">
+                                    <select name="USERNAME_ANGGOTA" class="form-control select-modal-width2" required>
+                                        <?php
+                                            foreach ($anggotas as $item) {
+                                                echo '
+                                                    <option value="'.$item->USERNAME_ANGGOTA.'" '.($item->USERNAME_ANGGOTA == $peminjaman->USERNAME_ANGGOTA ? 'selected' : '').'>'.$item->NAMA_ANGGOTA.'</option>
+                                                ';
+                                            }
+                                        ?>
                                         <option value="1">DEDY</option>
                                         <option value="2">LALALALA</option>
                                     </select>
@@ -24,26 +32,40 @@
                                 <div class="form-group">
                                     <label for="judul">Judul Buku</label>
                                     <br>
-                                    <select name="" class="form-control select-modal-width2" multiple="multiple">
-                                        <option value="1">Kambing Betina</option>
-                                        <option value="2">Sapi Jantan</option>
+                                    <select name="ID_BUKU[]" class="form-control select-modal-width2" multiple="multiple" required>
+                                        <?php
+                                            foreach ($bukus as $item) {
+                                                $isSelected = false;
+                                                foreach ($peminjamanDetails as $item2) {
+                                                    if($item->ID_BUKU == $item2->ID_BUKU){
+                                                        $isSelected = true;
+                                                        break;
+                                                    }
+                                                }
+                                                echo '
+                                                        <option value="'.$item->ID_BUKU.'" '.($isSelected == true ? 'selected' : '').'>'.$item->JUDUL_BUKU.'</option>
+                                                    ';
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="form-group select-modal-width2">
-                                    <label for="editTglPinjam">Tanggal Peminjaman</label>
-                                    <input type="text" name="" class="form-control" placeholder="Tanggal Peminjaman" id="editTglPinjam" required>
+                                    <label for="tglPinjam">Tanggal Peminjaman</label>
+                                    <input type="text" name="TGL_PEMINJAMAN" class="form-control" value="<?= $peminjaman->TGL_PEMINJAMAN?>" placeholder="Tanggal Peminjaman" id="tglPinjam" required>
                                 </div>
                                 <div class="form-group select-modal-width2">
-                                    <label for="editTglKembali">Tanggal Pengembalian</label>
-                                    <input type="text" name="" class="form-control" placeholder="Tanggal Pengembalian" id="editTglKembali" required>
+                                    <label for="tglKembali">Tanggal Pengembalian</label>
+                                    <input type="text" name="TGLPENGEMBALIAN_PEMINJAMAN" class="form-control" value="<?= $peminjaman->TGLPENGEMBALIAN_PEMINJAMAN?>" placeholder="Tanggal Pengembalian" id="tglKembali" required>
                                 </div>
                             </div>
                             <div class="text-md-right">
                                 <a onclick="history.back(-1)">
                                     <button type="button" class="btn btn-yellow"><i class="fa fa-arrow-left mr-1"></i>Kembali</button>
                                 </a>
-                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                <input type="hidden" name="idPeminjaman" value="<?= $idPeminjaman?>" />
+                                <button type="submit" class="btn btn-primary">Selanjutnya</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
