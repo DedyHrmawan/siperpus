@@ -35,7 +35,7 @@
                                                 <td>' . $item->ISBN_BUKU . '</td>
                                                 <td>' . $item->JUDUL_BUKU . '</td>
                                                 <td class="text-center">
-                                                <button class="btn btn-md btn-light tampilGambar img-thumbnail" data-source=" " type="button" data-toggle="modal" data-target="#tampilgambar"><i class="fa fa-image"></i></button>
+                                                <button class="btn btn-md btn-light tampilGambar img-thumbnail" data-source="'.$item->IMG_BUKU.'" type="button" data-toggle="modal" data-target="#tampilgambar"><i class="fa fa-image"></i></button>
                                             </td>
                                                 <td>' . $item->NAMA_KATEGORI . '</td>
                                                 <td>' . $item->TAHUN_BUKU . '</td>
@@ -62,7 +62,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form method="post" action="<?= site_url('buku/store') ?>">
+                            <form method="post" action="<?= site_url('buku/store') ?>" enctype="multipart/form-data">
 
                                 <div class="modal-body">
                                     <div class="form-group">
@@ -153,7 +153,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form method="post" action="<?= site_url('buku/edit') ?>">
+                            <form method="post" action="<?= site_url('buku/edit') ?>" enctype="multipart/form-data">
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label for="isbn">ISBN Buku</label>
@@ -167,10 +167,12 @@
                                         <div class="sbp-preview-content">
                                             <div class="form-group">
                                                 <!-- wadah preview -->
-                                                <img class="mx-auto" id="gambar-preview" alt="image preview" style="max-width: 300px;" />
+                                                <div style="text-align: center;">
+                                                    <img class="mx-auto" id="gambar-preview_edit" alt="image preview" style="max-width: 300px;" />
+                                                </div>
                                                 <div class="custom-file">
-                                                    <input type="file" name="image" class="custom-file-input gambar" id="source-gambar" onchange="previewGambar();">
-                                                    <label class="custom-file-label label-gambar" for="image-source source-gambar">Pilih Gambar</label>
+                                                    <input type="file" name="image" class="custom-file-input gambar" id="source-gambar_edit" onchange="previewGambar_edit();">
+                                                    <label class="custom-file-label label-gambar" for="image-source source-gambar_edit">Pilih Gambar</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -269,7 +271,7 @@
                             </div>
                             <div class="modal-body">
                                 <div style="text-align: center;">
-                                    <img style="max-width:300px;" src="<?= base_url(); ?>assets/img/buku/kambingjantan.jpg" />
+                                    <img style="max-width:300px;" id="mdlView_source" src="" />
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -313,6 +315,7 @@
                 $('#mdlEdit_penerbit').val(res.ID_PENERBIT).change()
                 $('#mdlEdit_tahun').val(res.TAHUN_BUKU)
                 $('#mdlEdit_stok').val(res.STOK_BUKU)
+                $('#gambar-preview_edit').attr('src', res.IMG_BUKU)
                 $('#mdlEdit_id').val(id)
             }
         })
@@ -320,6 +323,10 @@
     $('#dataTableBuku tbody').on('click', '.mdlHapus', function() {
         const id = $(this).data('id')
         $('#mdlHapus_id').val(id)
+    })
+    $('#dataTableBuku tbody').on('click', '.img-thumbnail', function() {
+        const source = $(this).data('source')
+        $('#mdlView_source').attr('src', source)
     })
 
     //preview sebelum tambah gambar
