@@ -7,6 +7,9 @@
         public function get($param){
             return $this->db->get_where('v_buku', $param)->row();
         }
+        public function getIn($param){
+            return $this->db->where_in('ID_BUKU', $param)->order_by('JUDUL_BUKU', 'desc')->get('v_buku')->result();
+        }
         public function insert($param){
             $this->db->insert('buku', $param);
         }
