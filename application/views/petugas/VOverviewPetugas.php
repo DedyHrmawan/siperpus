@@ -18,7 +18,7 @@
                         <div class="d-flex flex-row">
                             <div id="image_div">
                                 <div class="teksgambar">
-                                    <p>10</p>
+                                    <p><?= $totalAnggota?></p>
                                 </div>
                             </div>
                             <div class="mt-4 p-3 ">
@@ -38,7 +38,7 @@
                         <div class="d-flex flex-row">
                             <div id="image_div">
                                 <div class="teksgambar">
-                                    <p>10</p>
+                                    <p><?= $totalPetugas?></p>
                                 </div>
                             </div>
                             <div class="mt-4 p-3">
@@ -58,11 +58,11 @@
                         <div class="d-flex flex-row">
                             <div id="image_div">
                                 <div class="teksgambar">
-                                    <p>10</p>
+                                    <p><?= $totalPeminjaman?></p>
                                 </div>
                             </div>
                             <div class="mt-4 p-3">
-                                <div class="text-md font-weight-bold text-black mb-2">Jumlah Transaksi</div>
+                                <div class="text-md font-weight-bold text-black mb-2">Jumlah Peminjaman</div>
                                 <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2"></div>
                             </div>
                         </div>
@@ -81,33 +81,30 @@
                         <table class="table table-bordered table-hover" id="dataTablePembayaran" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>ID Transaksi</th>
-                                    <th>Status Pembayaran</th>
+                                    <th>ID Peminjaman</th>
                                     <th>Nama Anggota</th>
                                     <th>Denda</th>
+                                    <th>Status Pembayaran</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        202020202020
-                                    </td>
-                                    <td>Ramon Ridwan</td>
-                                    <td>Rp. 10000</td>
-                                    <td>
-                                        <div class="badge badge-danger badge-pill">Belum Bayar</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        202020202020
-                                    </td>
-                                    <td>Ramon Ridwan</td>
-                                    <td>Rp. 10000</td>
-                                    <td>
-                                        <div class="badge badge-success badge-pill">Sudah Bayar</div>
-                                    </td>
-                                </tr>
+                                <?php
+                                    foreach ($sanksis as $item) {
+                                        $tglBayar = date_create($item->TGL_SANKSI);
+                                        echo '
+                                            <tr>
+                                                <td>
+                                                    '.$item->ID_PEMINJAMAN.'
+                                                </td>
+                                                <td>'.$item->NAMA_ANGGOTA.'</td>
+                                                <td>'.$item->TOTAL_SANKSI.'</td>
+                                                <td>
+                                                    '.($item->TGL_SANKSI != "0000:00:00" ? '<div class="badge badge-success badge-pill">Sudah Bayar</div>' : '<div class="badge badge-danger badge-pill">Belum Bayar</div>').'
+                                                </td>
+                                            </tr>
+                                        ';
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>

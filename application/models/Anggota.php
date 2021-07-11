@@ -19,7 +19,7 @@
             $this->db->where('USERNAME_ANGGOTA', $param['USERNAME_ANGGOTA'])->delete('anggota');
         }
         public function getTotalData(){
-            return $this->db->query('SELECT COUNT(*) as TOTAL_ANGGOTA FROM anggota')->row();
+            return $this->db->count_all('anggota');
         }
     }
 ?>

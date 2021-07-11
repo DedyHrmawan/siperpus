@@ -96,7 +96,8 @@ $route['buku/edit']        = 'admin/BukuController/edit';
 $route['buku/destroy']     = 'admin/BukuController/destroy';
 
 //Overview
-$route['admin-overview']     = 'admin/AdminOverviewController/vOverview';
+$route['admin-overview']    = 'admin/AdminOverviewController/vOverview';
+$route['petugas-overview']  = 'petugas/PetugasOverviewController/vOverview';
 
 // peminjaman
 $route['peminjaman']                    = 'petugas/PeminjamanController/vPeminjaman';

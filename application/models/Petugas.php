@@ -19,7 +19,7 @@
             $this->db->where('USERNAME_PETUGAS', $param['USERNAME_PETUGAS'])->delete('petugas');
         }
         public function getTotalData(){
-            return $this->db->query('SELECT COUNT(*) as TOTAL_PETUGAS FROM petugas')->row();
+            return $this->db->count_all('petugas');
         }
     }
 ?>

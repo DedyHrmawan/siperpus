@@ -35,7 +35,7 @@
     <nav class="topnav navbar navbar-expand shadow navbar-light bg-content" id="sidenavAccordion">
         <!-- <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2 ml-3" id="sidebarToggle" href="assets/#"><i data-feather="menu"></i></button> -->
         <img style="width:3%" class="navbar-brand-img ml-3" src="<?= base_url(); ?>assets/img/ic_logoelibs.svg"></img>
-        <a class="navbar-brand ml-3" href="<?php echo site_url('admin/AdminOverview/vOverview'); ?>">Perpustakaan Online</a>
+        <a class="navbar-brand ml-3" href="<?php echo site_url('petugas-overview'); ?>">Perpustakaan Online</a>
         <ul class="navbar-nav align-items-center ml-auto">
             <li class="nav-item dropdown no-caret mr-2 dropdown-user">
                 <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="assets/javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-fluid" /> <i data-feather="user"></i></a>
