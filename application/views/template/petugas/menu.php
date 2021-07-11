@@ -1,5 +1,5 @@
 <div class="nav accordion" id="accordionSidenav">
-    <a class="nav-link " href="<?php echo site_url('Welcome/vOverviewPetugas'); ?>">
+    <a class="nav-link " href="<?php echo site_url('petugas-overview'); ?>">
         <i class="fas fa-eye ml-2 mr-3 fa-lg fa-fw"></i>
         Overview
     </a>

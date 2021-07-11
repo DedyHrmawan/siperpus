@@ -57,11 +57,11 @@
                         <div class="d-flex flex-row">
                             <div id="image_div">
                                 <div class="teksgambar">
-                                    <p>100</p>
+                                    <p><?= $totalPeminjaman?></p>
                                 </div>
                             </div>
                             <div class="mt-4 p-3">
-                                <div class="text-md font-weight-bold text-black mb-2">Jumlah Transaksi</div>
+                                <div class="text-md font-weight-bold text-black mb-2">Jumlah Peminjaman</div>
                                 <div class="text-xs font-weight-bold text-blue d-inline-flex align-items-center mt-2"></div>
                             </div>
                         </div>

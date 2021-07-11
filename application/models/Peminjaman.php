@@ -51,5 +51,8 @@
         public function deleteDetail($param){
             $this->db->where('ID_PEMINJAMAN', $param['ID_PEMINJAMAN'])->delete('peminjaman_detail');
         }
+        public function getTotalData(){
+            return $this->db->count_all('v_peminjaman');
+        }
     }
 ?>
