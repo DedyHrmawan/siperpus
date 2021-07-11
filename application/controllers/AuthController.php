@@ -21,7 +21,7 @@ class AuthController extends CI_Controller
         $email = $this->input->post('email');
         $pass = $this->input->post('password');
 
-        if ($email === "petugas@siperpus.com" && $pass === "admin") {
+        if ($email === "admin@siperpus.com" && $pass === "admin") {
             $session = array(
                 'who' => "admin",
                 'isLogin' => true

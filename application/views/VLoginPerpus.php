@@ -11,7 +11,7 @@
     <link href="<?= base_url(); ?>assets/css/styles.css" rel="stylesheet" />
     <link href="<?= base_url(); ?>assets/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <link rel="icon" type="image/x-icon" href="<?= base_url(); ?>assets/img/ic_logoelibs.svg" />
-  
+
 </head>
 
 <body class="bg-primary">
@@ -32,28 +32,28 @@
                                 <div class="card-body">
                                     <!-- Login form-->
                                     <?= $this->session->flashdata('message'); ?>
-                                        <!-- Form Group (email address)-->
-                                        <form action="<?= site_url('AuthController/auth_perpus') ?>" method="POST"></form>
-                                        <div class="form-group">
-                                            <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                            <input class="form-control py-4" id="inputEmailAddress" type="email" name="email" placeholder="Masukan Email" />
+                                    <!-- Form Group (email address)-->
+                                    <form action="<?= site_url('AuthController/auth_perpus') ?>" method="POST">
+                                    <div class="form-group">
+                                        <label class="small mb-1" for="inputEmailAddress">Email</label>
+                                        <input class="form-control py-4" id="inputEmailAddress" type="email" name="email" placeholder="Masukan Email" />
+                                    </div>
+                                    <!-- Form Group (password)-->
+                                    <div class="form-group">
+                                        <label class="small mb-1" for="inputPassword">Password</label>
+                                        <input class="form-control py-4" id="inputPassword" type="password" name="password" placeholder="Masukan Password" />
+                                    </div>
+                                    <!-- Form Group (remember password checkbox)-->
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
+                                            <label class="custom-control-label" for="rememberPasswordCheck">Remember password</label>
                                         </div>
-                                        <!-- Form Group (password)-->
-                                        <div class="form-group">
-                                            <label class="small mb-1" for="inputPassword">Password</label>
-                                            <input class="form-control py-4" id="inputPassword" type="password" name="password" placeholder="Masukan Password" />
-                                        </div>
-                                        <!-- Form Group (remember password checkbox)-->
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
-                                                <label class="custom-control-label" for="rememberPasswordCheck">Remember password</label>
-                                            </div>
-                                        </div>
-                                        <!-- Form Group (login box)-->
-                                        <div class="form-group d-flex align-items-center justify-content-center mt-4 mb-0">
-                                            <button class="btn btn-primary" type="submit" >Login</button>
-                                        </div>
+                                    </div>
+                                    <!-- Form Group (login box)-->
+                                    <div class="form-group d-flex align-items-center justify-content-center mt-4 mb-0">
+                                        <button class="btn btn-primary" type="submit">Masuk</button>
+                                    </div>
                                     </form>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@
                 <div class="container-fluid">
                     <div class="form-group d-flex align-items-center justify-content-center mt-4 mb-0">
                         <div class="row ">
-                            <div class="col-md-50 small mb-1">Copyright &#xA9; SYMA Decoration</div>
+                            <div class="col-md-50 small mb-1">Copyright &#xA9; SIPERPUS</div>
                         </div>
                     </div>
                 </div>
