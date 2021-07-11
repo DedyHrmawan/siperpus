@@ -25,53 +25,11 @@ class Welcome extends CI_Controller {
 
 	//Controller Kepalaperpus
 
-	public function vTransaksi()
+	public function vOverviewKepala()
     {
         $data['title']          = 'Overview | e-Libs';
 
-        $this->kepalatemplate->view('kepalaperpus/VTransaksiKepala', $data);
-    }
-
-	public function vLaporanBuku()
-    {
-        $data['title']          = 'Laporan Buku | e-Libs';
-
-        $this->kepalatemplate->view('kepalaperpus/VLaporanBuku', $data);
-    }
-
-	public function vLaporanPeminjaman()
-    {
-        $data['title']          = 'Laporan Peminjaman | e-Libs';
-
-        $this->kepalatemplate->view('kepalaperpus/VLaporanPeminjaman', $data);
-    }
-
-	public function vLaporanPengembalian()
-    {
-        $data['title']          = 'Laporan Pengembalian | e-Libs';
-
-        $this->kepalatemplate->view('kepalaperpus/VLaporanPengembalian', $data);
-    }
-
-	public function vLaporanDenda()
-    {
-        $data['title']          = 'Laporan Denda | e-Libs';
-
-        $this->kepalatemplate->view('kepalaperpus/VLaporanDenda', $data);
-    }
-
-	public function vLaporanPetugas()
-    {
-        $data['title']          = 'Laporan Petugas | e-Libs';
-
-        $this->kepalatemplate->view('kepalaperpus/VLaporanPetugas', $data);
-    }
-
-	public function vadmin()
-    {
-        $data['title']          = 'Admin | e-Libs';
-
-        $this->kepalatemplate->view('kepalaperpus/VAdmin', $data);
+        $this->kepalatemplate->view('kepalaperpus/VOverviewKepala', $data);
     }
 
     //Controller Petugas
