@@ -10,7 +10,8 @@
     <title>Login | SIPERPUS</title>
     <link href="<?= base_url(); ?>assets/css/styles.css" rel="stylesheet" />
     <link href="<?= base_url(); ?>assets/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <link rel="icon" type="image/x-icon" href="<?= base_url(); ?>assets/img/ic_symadeco.svg" />
+    <link rel="icon" type="image/x-icon" href="<?= base_url(); ?>assets/img/ic_logoelibs.svg" />
+  
 </head>
 
 <body class="bg-primary">
